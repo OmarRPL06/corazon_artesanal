@@ -28,6 +28,7 @@
                             <li><a class="dropdown-item" href="#">Ropa</a></li>
                             <li><a class="dropdown-item" href="#">Blusa</a></li>
                             <li><a class="dropdown-item" href="#">Sudaderas</a></li>
+                            <li><a class="dropdown-item" href="#">Sueteres</a></li>
                         </ul>
                     </li>
 
