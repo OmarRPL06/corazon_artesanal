@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 // Rutas de Javier
 
-Route::get('/login/j', function () {
-    return view('Login.Login');
+Route::get('/registro/j', function () {
+    return view('User.Registros');
 });
 
 // Rutas de Jeronimo

@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `telefono` varchar(255) DEFAULT NULL,
   `gmail` varchar(255) DEFAULT NULL,
   `password` longblob DEFAULT NULL,
-  `usuario` varchar(255) DEFAULT NULL,
+  `name_user` varchar(255) DEFAULT NULL,
   `tipo` varchar(255) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `update_at` datetime DEFAULT NULL,
