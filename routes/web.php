@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductosController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -8,7 +9,7 @@ Route::get('/', function () {
 
 
 // Rutas de Omar
-
+Route::get('/registrar/producto/orpl', [ProductosController::class, 'create']);
 
 
 // Rutas de Jaime
