@@ -3,23 +3,24 @@
 
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap/css/styles-jps.css">
+    <link rel="stylesheet" href="/bootstrap/css/omar.css">
 
     <script src="/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 
 
-<div class="container-login-jps">
-    <div class="container">
-        <div class="content m-4 d-flex justify-content-center align-items-center">
-            <div class="card border" style="width: 50rem;">
-                <div class="card-title text-center">
-                    REGISTRATE
-                </div>
-                <div class="card-body border">
-                    <form action="#" method="post">
+<div class="container">
+    <div class="content d-flex justify-content-center">
+        <div class="card alto m-4" style="width: 30rem;">
+            <div class="card-title text-center card-title-orpl">
+                REGISTRATE
+            </div>
+            <div class="card-body">
+                <form action="#" method="post" class="font-sans-serif-form-orpl text-center">
+                    <div class="content lbl-text">
                         <div class="mb-3">
-                            <label for="">Nombre</label>
+                            <label for="" class="form-label">Nombre</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
                                     <input class="form-control input-jps" type="text" value="" placeholder="your name"
@@ -28,7 +29,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="">Apellido Paterno</label>
+                            <label class="form-label" for="">Apellido Paterno</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
                                     <input class="form-control input-jps" type="text" value="" placeholder="first name"
@@ -37,7 +38,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="">Apellido Materno</label>
+                            <label class="form-label" for="">Apellido Materno</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
                                     <input class="form-control input-jps" type="text" value="" placeholder="last name"
@@ -46,7 +47,7 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="">Telefono</label>
+                            <label class="form-label" for="">Telefono</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
                                     <input class="form-control input-jps" type="number" value=""
@@ -55,10 +56,19 @@
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="" class="form-label">Correo</label>
+                            <label for="" class="lbl-text">Correo</label>
                             <div class="col-ms-3">
                                 <input class="form-control input-jps" type="email" value="" placeholder="your email"
                                     required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="">Tipo de usuario</label>
+                            <div class="mb-3">
+                                <div class="col-ms-3">
+                                    <input class="form-control input-jps" type="text" value="" placeholder="type user"
+                                        required>
+                                </div>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -75,27 +85,10 @@
                                     placeholder="repeat password" required>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="">Nombre de Usuario</label>
-                            <div class="mb-3">
-                                <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="user name"
-                                        required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="">Tipo de usuario</label>
-                            <div class="mb-3">
-                                <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="type user"
-                                        required>
-                                </div>
-                            </div>
-                        </div>
-                        <input type="button" value="INICIAR" class="btn btn-primary btn-jps">
-                    </form>
-                </div>
+                    </div>
+                    <input type="button" value="INICIAR" class="btn btn-primary btn-jps">
+                </form>
+                <a href="/login/j">Ya tengo una cuenta</a>
             </div>
         </div>
     </div>

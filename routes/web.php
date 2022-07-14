@@ -21,5 +21,7 @@ Route::get('/registrar/producto/orpl', [ProductosController::class, 'create']);
 Route::get('/registro/j', function () {
     return view('User.Registros');
 });
-
+Route::get('/login/j', function () {
+    return view('User.Login');
+});
 // Rutas de Jeronimo

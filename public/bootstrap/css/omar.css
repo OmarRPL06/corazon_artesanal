@@ -25,3 +25,21 @@
     font-family: sans-serif;
     font-size: 14px;
 }
+
+.alto {
+    box-shadow: 2px 2px 5px #999;
+}
+
+.lbl-text {
+    text-align: left;
+}
+
+.container-login-jps {
+    padding-top: 50;
+}
+
+.btn-jps:hover {
+    background-color: black;
+}
+
+.input-jps:hover {}
