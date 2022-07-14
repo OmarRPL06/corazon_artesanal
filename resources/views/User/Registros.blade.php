@@ -1,7 +1,12 @@
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="/bootstrap/css/styles-jps.css">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script src="/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/styles-jps.css">
+
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
 
 
 <div class="container-login-jps">
@@ -17,7 +22,8 @@
                             <label for="">Nombre</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="your name" required>
+                                    <input class="form-control input-jps" type="text" value="" placeholder="your name"
+                                        required>
                                 </div>
                             </div>
                         </div>
@@ -25,7 +31,8 @@
                             <label for="">Apellido Paterno</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="first name" required>
+                                    <input class="form-control input-jps" type="text" value="" placeholder="first name"
+                                        required>
                                 </div>
                             </div>
                         </div>
@@ -33,7 +40,8 @@
                             <label for="">Apellido Materno</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="last name" required>
+                                    <input class="form-control input-jps" type="text" value="" placeholder="last name"
+                                        required>
                                 </div>
                             </div>
                         </div>
@@ -41,35 +49,38 @@
                             <label for="">Telefono</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="number" value="" placeholder="your number phone" required>
+                                    <input class="form-control input-jps" type="number" value=""
+                                        placeholder="your number phone" required>
                                 </div>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Correo</label>
                             <div class="col-ms-3">
-                                <input class="form-control input-jps" type="email" value="" placeholder="your email" required>
+                                <input class="form-control input-jps" type="email" value="" placeholder="your email"
+                                    required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Contraseña</label>
                             <div class="col-ms-3">
-                                <input class="form-control input-jps" type="password" value="" placeholder="your password"
-                                    required>
+                                <input class="form-control input-jps" type="password" value=""
+                                    placeholder="your password" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Confirmar contraseña</label>
                             <div class="col-ms-3">
-                                <input class="form-control input-jps" type="password" value="" placeholder="repeat password"
-                                    required>
+                                <input class="form-control input-jps" type="password" value=""
+                                    placeholder="repeat password" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="">Nombre de Usuario</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="user name" required>
+                                    <input class="form-control input-jps" type="text" value="" placeholder="user name"
+                                        required>
                                 </div>
                             </div>
                         </div>
@@ -77,7 +88,8 @@
                             <label for="">Tipo de usuario</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="type user" required>
+                                    <input class="form-control input-jps" type="text" value="" placeholder="type user"
+                                        required>
                                 </div>
                             </div>
                         </div>
