@@ -13,17 +13,17 @@
 <div class="container">
     <div class="content d-flex justify-content-center">
         <div class="card alto m-4" style="width: 30rem;">
-            <div class="card-title text-center card-title-orpl">
+            <div class="card-header text-center card-title-orpl">
                 REGISTRATE
             </div>
             <div class="card-body">
-                <form action="#" method="post" class="font-sans-serif-form-orpl text-center">
+                <form action="#" method="post" class="font-sans-serif-orpl text-center">
                     <div class="content lbl-text">
                         <div class="mb-3">
                             <label for="" class="form-label">Nombre</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="your name"
+                                    <input class="form-control font-sans-serif-form-orpl" type="text" value="" placeholder="your name"
                                         required>
                                 </div>
                             </div>
@@ -32,7 +32,7 @@
                             <label class="form-label" for="">Apellido Paterno</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="first name"
+                                    <input class="form-control font-sans-serif-form-orpl" type="text" value="" placeholder="first name"
                                         required>
                                 </div>
                             </div>
@@ -41,7 +41,7 @@
                             <label class="form-label" for="">Apellido Materno</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="last name"
+                                    <input class="form-control font-sans-serif-form-orpl" type="text" value="" placeholder="last name"
                                         required>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                             <label class="form-label" for="">Telefono</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="number" value=""
+                                    <input class="form-control font-sans-serif-form-orpl" type="number" value=""
                                         placeholder="your number phone" required>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@
                         <div class="mb-3">
                             <label for="" class="lbl-text">Correo</label>
                             <div class="col-ms-3">
-                                <input class="form-control input-jps" type="email" value="" placeholder="your email"
+                                <input class="form-control font-sans-serif-form-orpl" type="email" value="" placeholder="your email"
                                     required>
                             </div>
                         </div>
@@ -66,7 +66,7 @@
                             <label class="form-label" for="">Tipo de usuario</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="type user"
+                                    <input class="form-control font-sans-serif-form-orpl" type="text" value="" placeholder="type user"
                                         required>
                                 </div>
                             </div>
@@ -74,14 +74,14 @@
                         <div class="mb-3">
                             <label for="" class="form-label">Contraseña</label>
                             <div class="col-ms-3">
-                                <input class="form-control input-jps" type="password" value=""
+                                <input class="form-control font-sans-serif-form-orpl" type="password" value=""
                                     placeholder="your password" required>
                             </div>
                         </div>
                         <div class="mb-3">
                             <label for="" class="form-label">Confirmar contraseña</label>
                             <div class="col-ms-3">
-                                <input class="form-control input-jps" type="password" value=""
+                                <input class="form-control font-sans-serif-form-orpl" type="password" value=""
                                     placeholder="repeat password" required>
                             </div>
                         </div>
