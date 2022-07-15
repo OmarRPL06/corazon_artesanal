@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 
 // Rutas de Jeronimo
+Route::get( 'hola', function(){
+    return view('altausuario');
+});
