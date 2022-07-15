@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\usuario;
+use App\Models\registrarusuario;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class UsuarioController extends Controller
+class RegistrarusuarioController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        
+        //
     }
 
     /**
@@ -25,7 +25,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        return view("Usuario.RegistrarUser");
+        return view("Usuario.ResgistrarUser");
     }
 
     /**
@@ -42,10 +42,10 @@ class UsuarioController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\usuario  $usuario
+     * @param  \App\Models\registrarusuario  $registrarusuario
      * @return \Illuminate\Http\Response
      */
-    public function show(usuario $usuario)
+    public function show(registrarusuario $registrarusuario)
     {
         //
     }
@@ -53,10 +53,10 @@ class UsuarioController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\usuario  $usuario
+     * @param  \App\Models\registrarusuario  $registrarusuario
      * @return \Illuminate\Http\Response
      */
-    public function edit(usuario $usuario)
+    public function edit(registrarusuario $registrarusuario)
     {
         //
     }
@@ -65,10 +65,10 @@ class UsuarioController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\usuario  $usuario
+     * @param  \App\Models\registrarusuario  $registrarusuario
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, usuario $usuario)
+    public function update(Request $request, registrarusuario $registrarusuario)
     {
         //
     }
@@ -76,10 +76,10 @@ class UsuarioController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\usuario  $usuario
+     * @param  \App\Models\registrarusuario  $registrarusuario
      * @return \Illuminate\Http\Response
      */
-    public function destroy(usuario $usuario)
+    public function destroy(registrarusuario $registrarusuario)
     {
         //
     }

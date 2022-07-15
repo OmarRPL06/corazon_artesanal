@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductosController;
-
+use App\Http\Controllers\RegistrarusuarioController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -23,6 +23,4 @@ Route::get('/login/j', function () {
 });
 
 // Rutas de Jeronimo
-Route::get( 'hola', function(){
-    return view('altausuario');
-});
+Route::get('/usuario/user/jgc',[RegistrarusuarioController::class, 'create']);
