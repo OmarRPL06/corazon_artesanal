@@ -12,7 +12,7 @@
     <div class="content position-absolute top-50 start-50 translate-middle">
         <div class="card alto" style="width: 18rem;">
             <div class="card-title text-center card-title-orpl">
-                REGISTRATE
+                LOGIN
             </div>
             <div class="card-body">
                 <form action="#" method="post" class="font-sans-serif-orpl text-center">
