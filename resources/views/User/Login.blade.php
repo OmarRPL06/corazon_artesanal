@@ -10,27 +10,27 @@
 
 <div class="container border">
     <div class="content position-absolute top-50 start-50 translate-middle">
-        <div class="card alto border" style="width: 18rem;">
+        <div class="card alto" style="width: 18rem;">
             <div class="card-title text-center card-title-orpl">
                 REGISTRATE
             </div>
             <div class="card-body">
-                <form action="#" method="post" class="font-sans-serif-form-orpl text-center">
+                <form action="#" method="post" class="font-sans-serif-orpl text-center">
                     <div class="content lbl-text">
                         <div class="mb-3">
                             <label for="">Usuario</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="text" value="" placeholder="your name"
+                                    <input class="form-control font-sans-serif-form-orpl input-jps" type="text" value="" placeholder="your name"
                                         required>
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 ">
                             <label for="">Contraseña</label>
                             <div class="mb-3">
                                 <div class="col-ms-3">
-                                    <input class="form-control input-jps" type="password" value=""
+                                    <input class="form-control font-sans-serif-form-orpl input-jps" type="password" value=""
                                         placeholder="password" required>
                                 </div>
                             </div>
