@@ -7,8 +7,8 @@
                 <div class="card-title-orpl text-center">Alta usuario</div>
             </div>
             <div class="container-form">
-                <form class="row g-3 font-sans-serif-orpl" action="{{route(Usuario.store)}}" method="POST">
-                    /*@csrf
+                <form class="row g-3 font-sans-serif-orpl" action="{{route("usuario.RegistrarUser")}}" method="POST">
+                    @csrf
                     @if (count($errors) > 0)
                         <div class="alert alert-danger" role="alert">
                             <ul>
@@ -17,7 +17,7 @@
                                 @endforeach
                             </ul>
                         </div>
-                    @endif*/
+                    @endif
                     <div class="col-12">
                         <label for="" class="form-label">Nombre</label>
                         <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="nombre"
@@ -37,14 +37,14 @@
                     </div>
                     <div class="col-md-2">
                         <label for="" class="form-label">Telefono</label>
-                        <input type="number" class="form-control font-sans-serif-form-orpl" id="" name="telefono"
+                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="telefono"
                             placeholder="Ejemplo: 9192412544" required title="Solo Letras y numeros">
                     </div>
                     <div class="col-md-3">
                         <label for="" class="form-label">Correo Electronico:</label>
-                        <input type="gmail" class="form-control font-sans-serif-form-orpl" id="" name="gmail"
-                            placeholder="Ejemplo: gomezjero98@gmail.com" required
-                            title="Debe de contener 10 digitos y solo numeros">
+                        <input type="email" class="form-control font-sans-serif-form-orpl" id="" name="email"
+                            placeholder="Ejemplo:gomezjero98@gmail.com" required
+                            title="Ingresa tu correo electronico">
                     </div>
                     <div class="col-3">
                         <label for="" class="form-label">Contraseña</label>
@@ -54,15 +54,14 @@
                     </div>
                     <div class="col-md-3">
                         <label for="" class="form-label">Usuario</label>
-                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="usuario"
+                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="user"
                             placeholder="Jgc2022laselva" required
                             pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\s]{1,254}" title="Solo Letras y numeros">
                     </div>
                     <div class="col-md-3">
                         <label for="" class="form-label">Tipo</label>
                         <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="tipo"
-                            placeholder="Ejemplo: Cliente mostrador" required
-                            pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ0]" title="Solo Letras y numeros">
+                            placeholder="Ejemplo: Cliente mostrador" required>
                     </div>
                     <div class="col-12">
                         <center>

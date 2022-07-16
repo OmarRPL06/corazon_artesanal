@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\registrarusuario;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
 class RegistrarusuarioController extends Controller
 {
     /**
@@ -15,7 +15,8 @@ class RegistrarusuarioController extends Controller
      */
     public function index()
     {
-        //
+        $usuarios=registrarusuario::all();
+        return view('usuario.index', compact('usuarios'));
     }
 
     /**
@@ -43,7 +44,7 @@ class RegistrarusuarioController extends Controller
             'telefono'=>['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required','string','min:8'],
-            'usuario'=>['required','string','min:10','max:15'],
+            'user'=>['required','string','min:5','max:15'],
             'tipo' => ['required'],
         ],[
             'nombre.required' => 'Escribe tu nombre solo letras no se aceptan numeros OK',
@@ -55,21 +56,21 @@ class RegistrarusuarioController extends Controller
             'email.unique' => 'La direccion de correo ya existe con otro usuario',
             'password.required'=>'Debes ingresar la contraseña de la cuenta',
             'password.min' => 'Debes ingresar una contraseña minino de 8 caracteres',
-            'usuario.required'=>'Es necesario un usuario',
-            'usuario.min'=>'El tamaño minimo de tu usario es de 10 caracteres',
-            'usuario.max'=>'La longitud minima de tu usuario es de 15 caracteres',
+            'user.required'=>'Es necesario un usuario',
+            'user.min'=>'El tamaño minimo de tu usario es de 10 caracteres',
+            'user.max'=>'La longitud maxima de tu usuario es de 15 caracteres',
             'tipo.required' => 'Debes seleccionar el tipo de usuario'
         ]);
-        $usuario = new usuario;
-        $usuario->name=$request->input('nombre');
-        $usuario->apellido_Paterno=$request->input('apellido_Paterno');
-        $usuario->apellido_Materno=$request->input('apellido_Materno');
-        $usuario->telefono->$request->input('telefono');
-        $usuario->email=$request->input('email');
-        $usuario->password=Hash::make($request->input('password'));
-        $usuario->usuario=$request->input('usuario');
-        $usuario->tipo=$request->input('tipo');
-        $usuario->save();
+        $registrarusuario = new registrarusuario;
+        $registrarusuario->nombre=$request->input('nombre');
+        $registrarusuario->apellido_Paterno=$request->input('apellido_Paterno');
+        $registrarusuario->apellido_Materno=$request->input('apellido_Materno');
+        $registrarusuario->telefono=$request->input('telefono');
+        $registrarusuario->email=$request->input('email');
+        $registrarusuario->password=Hash::make($request->input('password'));
+        $registrarusuario->user=$request->input('user');
+        $registrarusuario->tipo=$request->input('tipo');
+        $registrarusuario->save();
 
         if($request->input('root')){
 

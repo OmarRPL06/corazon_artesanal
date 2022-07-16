@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrarusuarioController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,3 +21,6 @@ Route::get('/', function () {
 
 
 // Rutas de Jeronimo
+Route::get('/user/jgc', [RegistrarusuarioController::class, 'create']);
+Route::post('/user/jgc', [RegistrarusuarioController::class, 'store'])->name('usuario.RegistrarUser');
+Route::resource('/usuarios',RegistrarusuarioController::class);
