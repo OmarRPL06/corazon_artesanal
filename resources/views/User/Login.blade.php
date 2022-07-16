@@ -38,7 +38,7 @@
                     </div>
                     <input type="button" value="INICIAR" class="btn btn-primary btn-jps">
                 </form>
-                <a href="/registro/j">Crear una cuenta</a>
+                <a href="/user/jgc">Crear una cuenta</a>
                 <p>
                     <a href="#">Olvido su contraseña?</a>
                 </p>
