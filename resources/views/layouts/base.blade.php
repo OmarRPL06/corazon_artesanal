@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap/css/omar.css">
     <link rel="stylesheet" href="/bootstrap/css/footer_jna.css">
+
+    <script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
+
     <script src="/bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-info p-3">
-        <a class="navbar-brand text-white" href="#">NAHUTEC</a>
+        <a class="navbar-brand text-white" href="{{ url('/') }}">NAHUTEC</a>
         <div class="container-fluid conatiner-lg-6">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,7 +35,9 @@
                             <li><a class="dropdown-item" href="#">Sueteres</a></li>
                         </ul>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ url('/consultar/producto/db/orpl') }}">Mis Productos</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Ofertas</a>
                     </li>
@@ -47,7 +52,7 @@
                     <input class="form-control me-2" type="search" placeholder="Buscar productos, y más" aria-label="Search">
                     <button class="btn btn-outline-success text-white" type="submit">Buscar</button>
                 </form>
-                <a href="/login/j"> 
+                <a href="/login/j">
                     <input class="btn btn-secondary m-1" type="button" value="INICIAR">
                 </a>
             </div>

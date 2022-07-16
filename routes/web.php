@@ -9,19 +9,24 @@ Route::get('/', function () {
 
 
 // Rutas de Omar
-Route::get('/registrar/producto/orpl', [ProductosController::class, 'create']);
+Route::get('/consultar/producto/orpl', function () {
+    return view('Productos.ConsultarProducto');
+});
 
+Route::get('/consultar/producto/db/orpl', [ProductosController::class, 'index']);
+Route::get('/registrar/producto/orpl', [ProductosController::class, 'create']);
+Route::post('/registrar/producto/post/orpl', [ProductosController::class, 'store'])->name('registro.producto');
 
 // Rutas de Jaime
 
 
 
 // Rutas de Javier
-
 Route::get('/registro/j', function () {
     return view('User.Registros');
 });
 Route::get('/login/j', function () {
     return view('User.Login');
 });
+
 // Rutas de Jeronimo
