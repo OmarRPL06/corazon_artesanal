@@ -1,0 +1,114 @@
+[33mcommit a11d17a908befe27a58b296381fc988a52b6ce82[m[33m ([m[1;36mHEAD -> [m[1;32mdeveloper[m[33m, [m[1;31morigin/jero10[m[33m, [m[1;31morigin/developer[m[33m)[m
+Author: 123jero123 <gomezjero98@gmail.com>
+Date:   Tue Jul 12 21:38:50 2022 -0500
+
+    Scrip de la base de datos
+
+[33mcommit c5b1de75a44235d40397663b1ba6205690b197fd[m[33m ([m[1;31morigin/Spartha[m[33m, [m[1;32momar[m[33m)[m
+Merge: 6f07318 c533f6f
+Author: OmarRPL06 <omarperezrl38@gmail.com>
+Date:   Mon Jul 11 00:11:47 2022 -0500
+
+    Merge branch 'omar' into developer
+
+[33mcommit c533f6f2ac2fa01183ab44b1c76600d6abb1a475[m[33m ([m[1;31morigin/omar[m[33m)[m
+Author: OmarRPL06 <omarperezrl38@gmail.com>
+Date:   Mon Jul 11 00:11:13 2022 -0500
+
+    Agregue un nuevo parrafo sin actualizar la rama con los cambios del developer
+
+[33mcommit 6f07318fecbcd3ba2a35539149d99f7b13e7226c[m[33m ([m[1;31morigin/ElGordo[m[33m)[m
+Author: JaimeNA03 <jaime.na97@hotmail.com>
+Date:   Mon Jul 11 00:05:41 2022 -0500
+
+    Agrege una carta mas al body en welcome
+
+[33mcommit 21e849d18b6016ed032020960dedd619c9dae04d[m
+Author: OmarRPL06 <omarperezrl38@gmail.com>
+Date:   Sun Jul 10 23:57:59 2022 -0500
+
+    Agregué una carta centrada en el body de Welcome
+
+[33mcommit 16cef070c9978069531d876cc0ee22ae620779b9[m
+Author: JaimeNA03 <jaime.na97@hotmail.com>
+Date:   Sun Jul 10 23:32:53 2022 -0500
+
+    Cambios en el footer
+
+[33mcommit 2c966ff583426c8c41bc2df4d312d9f6318e2456[m
+Merge: f071b98 ca72485
+Author: Javi Perez <javi9876789@gmail.com>
+Date:   Sun Jul 10 17:16:33 2022 -0500
+
+    Merge branch 'Spartha' into developer
+
+[33mcommit ca72485cdf8ce301530a0f3fbf91157662f99fd4[m
+Author: Javi Perez <javi9876789@gmail.com>
+Date:   Sun Jul 10 17:13:09 2022 -0500
+
+    cambio de color
+
+[33mcommit f071b981b9075f822719ba454cea3099e7869b39[m
+Merge: 47057e5 36f6d63
+Author: Javi Perez <javi9876789@gmail.com>
+Date:   Sat Jul 9 23:34:24 2022 -0500
+
+    Merge branch 'Spartha' into developer
+
+[33mcommit 36f6d63984a32289257f8736a74e8bcaa8718f84[m
+Author: Javi Perez <javi9876789@gmail.com>
+Date:   Sat Jul 9 23:31:47 2022 -0500
+
+    Agregue un dropdown item de sueters
+
+[33mcommit 47057e5673d3919a6eab7ada7d9520dd169f51e9[m
+Merge: 4ca6044 50bf8c0
+Author: Javi Perez <javi9876789@gmail.com>
+Date:   Sat Jul 9 23:22:49 2022 -0500
+
+    Merge branch 'Spartha' into developer
+
+[33mcommit 50bf8c06da3838599a887c00f570e8a6a9f3d889[m
+Author: Javi Perez <javi9876789@gmail.com>
+Date:   Sat Jul 9 23:13:02 2022 -0500
+
+    no ahi cambios en este commit
+
+[33mcommit 4ca60440daa5467aab2152a22a03396c1063688f[m
+Merge: 7e4dd3c 5d71e3e
+Author: Spartha1808 <75823630+12334-max@users.noreply.github.com>
+Date:   Sat Jul 9 22:50:41 2022 -0500
+
+    Merge pull request #2 from OmarRPL06/Spartha
+    
+    Spartha
+
+[33mcommit 5d71e3ee3aa2951bf2b140e03cae84b91452ecb8[m
+Author: Javi Perez <javi9876789@gmail.com>
+Date:   Sat Jul 9 19:08:30 2022 -0500
+
+    Navbar aliniado a la derecha
+
+[33mcommit 7e4dd3c58ce59358999d0ea08a7b9de3b3d97ceb[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: OmarRPL06 <omarperezrl38@gmail.com>
+Date:   Fri Jul 8 00:33:39 2022 -0500
+
+    Se agregó bostrapp
+
+[33mcommit 2f7a67bf22bd60e133d779defcebecf13f176722[m
+Author: OmarRPL06 <omarperezrl38@gmail.com>
+Date:   Tue Jul 5 17:37:51 2022 -0500
+
+    titulo de integradora agregado en developer
+
+[33mcommit 9ddb8e19cbfe00e647d43914a87e80602604beb9[m
+Author: OmarRPL06 <omarperezrl38@gmail.com>
+Date:   Tue Jul 5 17:04:44 2022 -0500
+
+    Proyecto creado recientemente
+
+[33mcommit 6139a521deb036440f96feae6a28a3ebf87a6cd0[m
+Author: OmarRPL06 <omarperezrl38@gmail.com>
+Date:   Tue Jul 5 17:02:35 2022 -0500
+
+    Proyecto creado recientemente

@@ -1,17 +1,8 @@
-body {
-    background-color: rgb(248, 251, 253);
-}
-
-.container-tittle {
-    padding: 20px;
-    text-align: center;
-    text-shadow: 0 0 3px rgb(153, 222, 114);
-}
-
 .container-card {
+    padding-top: 35px;
     padding-bottom: 35px;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .container-form {
@@ -19,10 +10,36 @@ body {
     font-weight: 500;
 }
 
-.container-map {
-    padding-bottom: 40px;
+.card-title-orpl {
+    font-weight: 500;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+/* estilo para los form */
+.font-sans-serif-orpl {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+/* estilo placeholders inputs*/
+.font-sans-serif-form-orpl {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+/* Sombra */
+.alto {
+    box-shadow: 2px 2px 5px #999;
 }
 
-.margin-breadcrumb {
-    padding-left: 10px;
+/* etiquetas aliniados a la ozquierda */
+.lbl-text {
+    text-align: left;
+}
+
+.container-login-jps {
+    padding-top: 50;
+}
+
+/* Cambiar color al pasar el cursos en cualquier boton */
+.btn-jps:hover {
+    background-color: black;
 }
