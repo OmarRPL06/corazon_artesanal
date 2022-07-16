@@ -143,3 +143,61 @@ body {
     flex: 2 0px;
   }
 }
+
+.counts {
+  margin: 0px 0px 50px 0px;
+  padding: 0;
+}
+
+.carousel-indicators li {
+  border-radius: 50%;
+  color: #080202;
+  background-color: rgb(14, 9, 9);
+}
+
+.card-group{
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 10px;
+  
+}
+
+.row{
+  margin: 0px 0px 10px 0px;
+}
+
+.card3{
+  margin: 0px 0px 10px 0px;
+}
+.card4{
+  margin: 0px 0px 10px 0px;
+}
+
+.card5{
+  margin: 0px 0px 10px 0px;
+  padding: 30px 30px 20px 30px;
+}
+.card6{
+  margin: 0px 0px 10px 0px;
+}
+
+.btn1{
+  margin: 0px 0px 5px 0px;
+  padding: 30px 30px 20px 30px;
+}
+
+.cardjna{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 10px 0px;
+}
+.cardh1{
+  text-align: center;
+}
+.cardh2{
+  flex: 1 1 auto;
+}
+.cardh3{
+  flex: 1 1 auto;
+}
