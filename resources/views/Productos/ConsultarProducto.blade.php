@@ -21,11 +21,18 @@
                             <div class="card" style="width: 18rem;">
                                 <img src="{{ asset("/uploads/$productos->img") }}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                        of
-                                        the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    @php
+                                        $precio = $productos->precio;
+                                        $iva = $productos->iva;
+                                        $precio_real = $precio + $iva;
+                                    @endphp
+                                    <h5 class="card-title">${{ $precio_real }}</h5>
+                                    <p>Envío gratis</p>
+                                    <p>{{ $productos->nombreProducto }}</p>
+                                    <p>{{ $productos->tipo }}, Talla: {{ $productos->talla }}, {{ $productos->modelo }}</p>
+                                    <p>Color: {{ $productos->color }}</p>
+                                    <p>Existencia: {{ $productos->existencia }}</p>
+                                    <a href="#" class="btn btn-primary">Comprar</a>
                                 </div>
                             </div>
                             <br>
