@@ -14,7 +14,11 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        //
+        $productos = Productos::orderBy('created_at')->get();
+
+        // dd($productos);
+
+        return view('Productos.ConsultarProducto', ['producto' => $productos]);
     }
 
     /**
@@ -35,7 +39,48 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'idUser'   => 'required',
+            'nombre_producto'   => 'required',
+            'tipo'              => 'required',
+            'modelo'            => 'required',
+            'existencia'        => 'required',
+            'talla'             => 'required',
+            'color'             => 'required',
+            'precio'            => 'required',
+            'iva'               => 'required',
+            'img'               => 'required|image',
+        ],[
+            'idUser.required'           => 'Tiene que tener una cuenta para poder registrar',
+            'nombre_producto.required'  => 'Debe de agregar el nombre del producto',
+            'tipo.required'             => 'Debe de agregar el tipo de producto',
+            'modelo.required'           => 'Ingrese el modelo del producto',
+            'existencia.required'       => 'Ingrese la existencia del producto',
+            'talla.required'            => 'Ingrese la talla',
+            'color.required'            => 'Ingrese el color',
+            'precio.required'           => 'Ingrese el precio del producto',
+            'iva.required'              => 'Ingrese la iva del producto',
+            'img.required'              => 'Debe de subir la imagen del producto en el formato correcto',
+            'img.image'                 => 'No se permiten archivos de otro formato',
+        ]);
+
+        $image = $request->file('img');
+        $image->move('uploads', $image->getClientOriginalName());
+
+        $producto = new Productos;
+        $producto->idUser=$request->input('idUser');
+        $producto->nombreProducto=$request->input('nombre_producto');
+        $producto->tipo=$request->input('tipo');
+        $producto->modelo=$request->input('modelo');
+        $producto->existencia=$request->input('existencia');
+        $producto->talla=$request->input('talla');
+        $producto->color=$request->input('color');
+        $producto->precio=$request->input('precio');
+        $producto->iva=$request->input('iva');
+        $producto->img=$image->getClientOriginalName();
+        $producto->save();
+
+        return redirect()->back()->withSuccess('!!SE HA PUBLICADO UN NUEVO PRODUCTO!!');
     }
 
     /**

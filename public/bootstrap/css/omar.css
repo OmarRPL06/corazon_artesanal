@@ -10,21 +10,32 @@
     font-weight: 500;
 }
 
+.container-table {
+    padding: 20px;
+    font-weight: 500;
+}
+
 .card-title-orpl {
     font-weight: 500;
     font-size: 25px;
     font-family: sans-serif;
 }
+
 /* estilo para los form */
 .font-sans-serif-orpl {
     font-family: sans-serif;
     font-size: 16px;
 }
+
 /* estilo placeholders inputs*/
 .font-sans-serif-form-orpl {
     font-family: sans-serif;
     font-size: 14px;
 }
+
+
+/* @javier=================================================== */
+
 /* Sombra */
 .alto {
     box-shadow: 2px 2px 5px #999;
