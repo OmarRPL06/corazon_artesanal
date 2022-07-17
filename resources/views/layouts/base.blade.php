@@ -8,6 +8,7 @@
     <title>Corazón Artesanal</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap/css/omar.css">
+    <link rel="stylesheet" href="/bootstrap/css/jaime.css">
     <link rel="stylesheet" href="/bootstrap/css/footer_jna.css">
 
     <script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
