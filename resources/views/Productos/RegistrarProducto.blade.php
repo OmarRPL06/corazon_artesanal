@@ -73,7 +73,7 @@
                     <div class="col-12">
                         <center>
                             <button type="submit" class="btn btn-primary btn-sm">Registrar</button>
-                            <a href="{{ url('/consultar/producto/orpl') }}" class="btn btn-danger btn-sm">Cancelar</a>
+                            <a href="{{ url('/consultar/producto/db/orpl') }}" class="btn btn-danger btn-sm">Cancelar</a>
                         </center>
                     </div>
                 </form>

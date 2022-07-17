@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrarusuarioController;
+use App\Http\Controllers\ProductosController;
 
 Route::get('/', function () {
     return view('welcome');
