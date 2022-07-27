@@ -127,4 +127,11 @@ class ProductosController extends Controller
     {
         //
     }
+
+    public function listApi() {
+
+        $productos = Productos::all();
+
+        return $productos;
+    }
 }
