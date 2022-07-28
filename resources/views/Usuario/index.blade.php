@@ -25,7 +25,7 @@
                 <tbody>
                 @foreach($usuarios as $usuario)
                     <tr>
-                        <th><a href="#">Editar</a>|<a href="#">Eliminar</a></th>
+                        <th><a href="{{route('usuario.edit',$usuario->idUser)}}">Editar</a>|<a href="#">Eliminar</a></th>
                         <th>{{$usuario->idUser}}</th>
                         <th>{{$usuario->nombre}}</th>
                         <th>{{$usuario->apellido_Paterno}}</th>
