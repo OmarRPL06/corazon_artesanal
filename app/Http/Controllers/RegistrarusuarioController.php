@@ -100,9 +100,10 @@ class RegistrarusuarioController extends Controller
      * @param  \App\Models\registrarusuario  $registrarusuario
      * @return \Illuminate\Http\Response
      */
-    public function edit(registrarusuario $registrarusuario)
+    public function edit($idUser)
     {
-        //
+        $usuario=Usuario::finOrFail($idUser);
+        return view('Usuario.editUser',compact('usuario'));
     }
 
     /**

@@ -6,7 +6,7 @@
  <h4>Gestion de Usuarios</h4>
  <div class="row">
     <div class="col-xl-12">
-        <div class="table-responsibe">
+        <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -25,7 +25,7 @@
                 <tbody>
                 @foreach($usuarios as $usuario)
                     <tr>
-                        <th>Editar Eliminar</th>
+                        <th><a href="{{route('usuario.edit',$usuario->idUser)}}">Editar</a>|<a href="#">Eliminar</a></th>
                         <th>{{$usuario->idUser}}</th>
                         <th>{{$usuario->nombre}}</th>
                         <th>{{$usuario->apellido_Paterno}}</th>
@@ -38,12 +38,9 @@
                     </tr>
                 @endforeach
                 </tbody>
-
             </table>
-
         </div>
     </div>
-
  </div>
 </div>
 @include('includes.footer')
