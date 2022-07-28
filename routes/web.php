@@ -36,4 +36,3 @@ Route::post('/user/jgc', [RegistrarusuarioController::class, 'store'])->name('us
 Route::resource('/usuarios',RegistrarusuarioController::class);
 
 Route::post('/user/jgc2', [RegistrarusuarioController::class, 'edit'])->name('usuario.editUser');
->>>>>>> jero10
