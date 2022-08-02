@@ -5,7 +5,7 @@
             <div class="card-header">
                 <div class="row">
                     <div class="col-md-10">
-                        <div class="card-title-orpl text-center">Mis Productos en Venta</div>
+                        <div class="card-title-orpl"><i> Mis Productos en Venta</i></div>
                     </div>
                     <div class="col-md-2">
                         <a href="{{ url('/registrar/producto/orpl') }}" class="btn btn-primary btn-sm">Subir Nuevo Producto
