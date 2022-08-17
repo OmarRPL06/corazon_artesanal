@@ -53,7 +53,7 @@
                     <input class="form-control me-2" type="search" placeholder="Buscar productos, y más" aria-label="Search">
                     <button class="btn btn-outline-success text-white" type="submit">Buscar</button>
                 </form>
-                <a href="/login/j">
+                <a href="/login">
                     <input class="btn btn-secondary m-1" type="button" value="INICIAR">
                 </a>
             </div>

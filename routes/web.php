@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrarusuarioController;
 use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\SesionController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,13 +28,13 @@ Route::post('/registrar/producto/post/orpl', [ProductosController::class, 'store
 Route::get('/registro/j', function () {
     return view('User.Registros');
 });
-Route::get('/login/j', function () {
-    return view('User.Login');
-});
+
 
 // Rutas de Jeronimo
 Route::get('/user/jgc', [RegistrarusuarioController::class, 'create']);
 Route::post('/user/jgc', [RegistrarusuarioController::class, 'store'])->name('usuario.RegistrarUser');
 Route::resource('/usuarios',RegistrarusuarioController::class);
+Route::get('/login',[SesionController::class, 'create'])->name('usuario.login');
+Route::post('/login',[SesionController::class, 'store'])->name('usuario.store');
 
-Route::post('/user/jgc2', [RegistrarusuarioController::class, 'edit'])->name('usuario.editUser');
+//Route::post('/user/jgc2', [RegistrarusuarioController::class, 'edit'])->name('usuario.editUser');

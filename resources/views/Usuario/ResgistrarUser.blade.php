@@ -7,7 +7,7 @@
                 <div class="card-title-orpl text-center">Alta usuario</div>
             </div>
             <div class="container-form">
-                <form class="row g-3 font-sans-serif-orpl" action="{{route("usuario.RegistrarUser")}}" method="POST">
+                <form class="row g-3 font-sans-serif-orpl" action="{{route('usuario.RegistrarUser')}}" method="POST">
                     @csrf
                     @if (count($errors) > 0)
                         <div class="alert alert-danger" role="alert">
@@ -48,9 +48,8 @@
                     </div>
                     <div class="col-3">
                         <label for="" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control font-sans-serif-form-orpl" id="" name="password"
-                            placeholder="Ejemplo: laselva.234#jgc#" required pattern="[0-9]{1,50}"
-                            title="Solo se aceptan numeros">
+                        <input type="password" class="form-control font-sans-serif-form-orpl" id="pass" name="password"
+                            placeholder="Ejemplo: laselva.234#jgc#" required>
                     </div>
                     <div class="col-md-3">
                         <label for="" class="form-label">Usuario</label>
@@ -62,7 +61,7 @@
                         <label for="" class="form-label">Tipo</label>
                         <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="tipo"
                             placeholder="Ejemplo: Cliente mostrador" required
-                            pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ0]" title="Solo Letras y numeros">
+                            >
                     </div>
                     <div class="col-12">
                         <center>

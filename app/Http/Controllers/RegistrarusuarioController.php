@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\registrarusuario;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -26,6 +25,7 @@ class RegistrarusuarioController extends Controller
      */
     public function create()
     {
+
         return view("Usuario.ResgistrarUser");
     }
 
@@ -36,7 +36,8 @@ class RegistrarusuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+
         $this->validate($request, [
             'nombre' => ['required'],
             'apellido_Paterno'=>['required'],
@@ -61,7 +62,8 @@ class RegistrarusuarioController extends Controller
             'user.max'=>'La longitud maxima de tu usuario es de 15 caracteres',
             'tipo.required' => 'Debes seleccionar el tipo de usuario'
         ]);
-        $registrarusuario = new registrarusuario;
+
+        $registrarusuario = new registrarusuario;      
         $registrarusuario->nombre=$request->input('nombre');
         $registrarusuario->apellido_Paterno=$request->input('apellido_Paterno');
         $registrarusuario->apellido_Materno=$request->input('apellido_Materno');
@@ -71,8 +73,7 @@ class RegistrarusuarioController extends Controller
         $registrarusuario->user=$request->input('user');
         $registrarusuario->tipo=$request->input('tipo');
         $registrarusuario->save();
-
-        if($request->input('root')){
+       if($request->input('root')){
 
             return redirect()->back()->withSuccess('Se registró un nuevo usuario');
 
