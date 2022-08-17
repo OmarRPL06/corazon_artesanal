@@ -1,6 +1,6 @@
 <footer class="footer bg-light-black text-white">
     <div class="footer__addr">
-        <h4><a href="" class="text-white">Aviso de privacidad</a></h4>
+        <h4><a href="/politicas/AvisoPrivacidad.pdf" class="text-white" target="_blanck">Aviso de privacidad</a></h4>
         <h2>Dirección:</h2>
         <address>barrio Guadalupe, en la ciudad de Ocosingo.
             <br>

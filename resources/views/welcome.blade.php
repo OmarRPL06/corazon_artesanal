@@ -13,7 +13,7 @@
                 <center><img src="/imagenes/banner.jpg" class="d-block img-slider" width="700" height="380"></center>
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Pinturas Artesanales</h5>
-                    <p>Pintaras 100% hechas con talento del artesano.</p>
+                    <p>Pinturas 100% hechas con talento del artesano.</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="4000">
