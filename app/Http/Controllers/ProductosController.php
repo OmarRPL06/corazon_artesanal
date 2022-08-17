@@ -18,6 +18,15 @@ class ProductosController extends Controller
 
         // dd($productos);
 
+        return view('welcome', ['producto' => $productos]);
+    }
+
+    public function miProducto()
+    {
+        $productos = Productos::orderBy('created_at')->get();
+
+        // dd($productos);
+
         return view('Productos.ConsultarProducto', ['producto' => $productos]);
     }
 

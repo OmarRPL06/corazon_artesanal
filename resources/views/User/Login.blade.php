@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap/css/styles-jps.css">
     <link rel="stylesheet" href="/bootstrap/css/omar.css">
+    <link rel="stylesheet" href="/bootstrap/css/jaime.css">
 
     <script src="/bootstrap/js/bootstrap.min.js"></script>
 </head>
@@ -11,7 +12,7 @@
 <div class="container border">
     <div class="content position-absolute top-50 start-50 translate-middle">
         <div class="card alto" style="width: 18rem;">
-            <div class="card-header text-center card-title-orpl">
+            <div class="card-header text-center card-title-orpl bg-light-black color-darkorange">
                 LOGIN
             </div>
             <div class="card-body">
@@ -36,14 +37,14 @@
                             </div>
                         </div>
                     </div>
-                    <input type="button" value="INICIAR" class="btn btn-primary btn-jps">
+                    <input type="button" value="INICIAR" class="btn btn-darkorange btn-jps btn-sm text-white">
                 </form>
-                <a href="/user/jgc">Crear una cuenta</a>
+                <a href="/user/jgc" class="text-login" >Crear una cuenta</a>
                 <p>
-                    <a href="#">Olvido su contraseña?</a>
+                    <a href="#" class="text-login">Olvido su contraseña?</a>
                 </p>
             </div>
         </div>
-        <a href="/">Regresar</a>
+        <a href="/" class="text-login">Regresar</a>
     </div>
 </div>

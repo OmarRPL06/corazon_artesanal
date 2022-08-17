@@ -11,35 +11,7 @@
                         Producto +</a>
                 </div>
             </div>
-            <div class="container-table">
-                <div class="row">
-                    @foreach ($producto as $productos)
-                        <div class="col-md-3">
-                            <div class="card" style="width: 18rem;">
-                                <img src="{{ asset("/uploads/$productos->img") }}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    @php
-                                        $precio = $productos->precio;
-                                        $iva = $productos->iva;
-                                        $precio_real = $precio + $iva;
-                                    @endphp
-                                    <h5 class="card-title">${{ $precio_real }}</h5>
-                                    <p>Envío gratis</p>
-                                    <p>{{ $productos->nombreProducto }}</p>
-                                    <p>{{ $productos->tipo }}, Talla: {{ $productos->talla }}, {{ $productos->modelo }}</p>
-                                    <p>Color: {{ $productos->color }}</p>
-                                    <p>Existencia: {{ $productos->existencia }}</p>
-                                    <a href="#" class="btn btn-primary btn-sm">Comprar</a>
-                                    <a href="#" class="btn btn-warning btn-sm">Agregar Al carrito</a>
-                                    <a href="#" class="btn btn-success btn-sm">Modificar</a>
-                                    <a href="#" class="btn btn-danger btn-sm">Eliminar</a>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
+
             <!-- Section-->
             <section class="py-5">
                 <div class="container px-4 px-lg-5 mt-5">
@@ -50,7 +22,7 @@
                                     <!-- Product image-->
                                     <img class="card-img-top" src="{{ asset("/uploads/$productos->img") }}" alt="..." />
                                     <!-- Product details-->
-                                    <div class="card-body p-4">
+                                    <div class="card-body p-3">
                                         <div class="text-center">
                                             <!-- Product name-->
                                             <h6 class="fw-bolder">{{ $productos->nombreProducto }}</h6>
@@ -68,11 +40,17 @@
                                         </div>
                                     </div>
                                     <!-- Product actions-->
-                                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
                                         <div class="text-center">
                                             <a class="btn btn-outline-dark mt-auto btn-sm" href="#">Comprar</a>
                                             <button class="btn btn-darkorange btn-sm" type="submit">
-                                                <i class="bi-cart-fill me-1"></i>
+                                                <i class="bi-cart-fill me-1"><a href="#"></a></i>
+                                            </button>
+                                            <button class="btn btn-darkorange btn-sm" type="submit">
+                                                <i class="bi bi-pencil-fill me-1"><a href="#"></a></i>
+                                            </button>
+                                            <button class="btn btn-darkorange btn-sm" type="submit">
+                                                <i class="bi bi-trash-fill me-1"><a href="#"></a></i>
                                             </button>
                                         </div>
                                     </div>
@@ -83,6 +61,7 @@
                 </div>
             </section>
             <!-- Fin section -->
+
         </div>
     </div>
 

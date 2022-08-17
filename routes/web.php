@@ -4,23 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrarusuarioController;
 use App\Http\Controllers\ProductosController;
 
-Route::get('/', function () {
-    return view('welcome');
-    // return view('index');
-});
-
-
-// Rutas de Omar
-Route::get('/consultar/producto/orpl', function () {
-    return view('Productos.ConsultarProducto');
-});
-
-Route::get('/consultar/producto/db/orpl', [ProductosController::class, 'index']);
+// Rutas omar
+Route::get('/', [ProductosController::class, 'index']);
+Route::get('/consultar/producto/db/orpl', [ProductosController::class, 'miProducto']);
 Route::get('/registrar/producto/orpl', [ProductosController::class, 'create']);
 Route::post('/registrar/producto/post/orpl', [ProductosController::class, 'store'])->name('registro.producto');
 
 // Rutas de Jaime
-
 
 
 // Rutas de Javier

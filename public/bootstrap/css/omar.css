@@ -46,6 +46,14 @@
     color: darkorange !important;
 }
 
+.text-login {
+    color: #343a40;
+}
+
+.text-login:hover {
+    color: darkorange;
+}
+
 .center-orpl {
     text-align: center !important;
 }

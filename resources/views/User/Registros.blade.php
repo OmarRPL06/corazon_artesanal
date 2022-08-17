@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap/css/styles-jps.css">
     <link rel="stylesheet" href="/bootstrap/css/omar.css">
+    <link rel="stylesheet" href="/bootstrap/css/jaime.css">
 
     <script src="/bootstrap/js/bootstrap.min.js"></script>
 </head>
@@ -86,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <input type="button" value="INICIAR" class="btn btn-primary btn-jps">
+                    <input type="button" value="INICIAR" class="btn btn-darkorange btn-jps btn-sm">
                 </form>
                 <a href="/login/j">Ya tengo una cuenta</a>
             </div>
