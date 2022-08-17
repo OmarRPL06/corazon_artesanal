@@ -17,7 +17,7 @@
 
 .card-title-orpl {
     font-weight: 500;
-    font-size: 25px;
+    font-size: 20px;
     font-family: sans-serif;
 }
 
@@ -34,11 +34,63 @@
 }
 
 
+.btn-darkorange {
+    background-color: darkorange !important;
+}
+
+.btn-darkorange:hover {
+    background-color: orange !important;
+}
+
+.color-darkorange {
+    color: darkorange !important;
+}
+
+.center-orpl {
+    text-align: center !important;
+}
+
+.display-inline-orpl {
+    display: inline-block !important;
+}
+
+.align-left {
+    float: left !important;
+}
+
+.align-right {
+    float: right !important;
+}
+/* Estilo del Slider en el welcome */
+
+.slide-top {
+    padding-top: 20px;
+}
+
+.img-slider {
+    border-radius: 8px;
+    overflow: hidden;
+    -webkit-transition:all .9s ease; /* Safari y Chrome */
+    -moz-transition:all .9s ease; /* Firefox */
+    -o-transition:all .9s ease; /* IE 9 */
+    -ms-transition:all .9s ease; /* Opera */
+}
+
+.img-slider:hover {
+    /* opacity: 0.9; */
+    -webkit-transform:scale(1.25);
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25);
+    -o-transform:scale(1.25);
+    transform:scale(1.25);
+}
+
+
 /* @javier=================================================== */
 
 /* Sombra */
 .alto {
-    box-shadow: 2px 2px 5px #999;
+    box-shadow: 3px 3px 5px #999;
 }
 
 /* etiquetas aliniados a la ozquierda */

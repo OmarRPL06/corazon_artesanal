@@ -8,8 +8,8 @@
             </div>
             <div class="container-form">
                 <div id="message">
-                    @if(session('success'))
-                        <div class="alert alert-success text-center" role="alert">{{session('success')}}</div>
+                    @if (session('success'))
+                        <div class="alert alert-success text-center" role="alert">{{ session('success') }}</div>
                     @endif
                 </div>
                 @if (count($errors) > 0)
@@ -21,12 +21,13 @@
                         </ul>
                     </div>
                 @endif
-                <form id="forms" class="row g-3 font-sans-serif-orpl" action="{{ route('registro.producto') }}" method="POST" enctype="multipart/form-data">
+                <form id="forms" class="row g-3 font-sans-serif-orpl" action="{{ route('registro.producto') }}"
+                    method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="col-12">
                         <label for="" class="form-label">Nombre del producto:</label>
-                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="nombre_producto"
-                            placeholder="Ingrese el nombre del producto" required>
+                        <input type="text" class="form-control font-sans-serif-form-orpl" id=""
+                            name="nombre_producto" placeholder="Ingrese el nombre del producto" required>
                         <input type="hidden" name="idUser" value="1">
                     </div>
                     <div class="col-md-6">
@@ -41,8 +42,8 @@
                     </div>
                     <div class="col-md-2">
                         <label for="" class="form-label">Existencia:</label>
-                        <input type="number" class="form-control font-sans-serif-form-orpl" id="" name="existencia"
-                            placeholder="Ejmp: 1" required>
+                        <input type="number" class="form-control font-sans-serif-form-orpl" id=""
+                            name="existencia" placeholder="Ejmp: 1" required>
                     </div>
                     <div class="col-md-3">
                         <label for="" class="form-label">Talla:</label>
@@ -64,7 +65,6 @@
                         <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="iva"
                             placeholder="Ingrese la colonia de donde vive..." required>
                     </div>
-
                     <div class="col-md-3">
                         <label for="" class="form-label">Imagen del producto:</label>
                         <input type="file" class="form-control font-sans-serif-form-orpl" id="" name="img"
@@ -84,14 +84,3 @@
     @include('includes.footer')
 @endsection
 
-<script type="text/javascript">
-
-    function borrar() {
-        $("#message").load(" #message");
-    }
-
-    setInterval(function(){
-        borrar();
-    }, 3000);
-
-</script>

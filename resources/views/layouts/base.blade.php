@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corazón Artesanal</title>
+    <title>(NAHUTEC) Corazón Artesanal</title>
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bootstrap/css/omar.css">
     <link rel="stylesheet" href="/bootstrap/css/jaime.css">
@@ -14,15 +14,21 @@
     <script src="/bootstrap/js/jquery-3.6.0.min.js"></script>
 
     <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-info p-3">
+    <nav class="navbar navbar-expand-lg bg-light-black p-3">
         <a class="navbar-brand text-white" href="{{ url('/') }}">NAHUTEC</a>
         <div class="container-fluid conatiner-lg-6">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <form class="d-flex mb-0 h1" role="search">
+                <input class="form-control me-2 form-control-sm" type="search" placeholder="Buscar producto..." aria-label="Search">
+                <button class="btn btn-darkorange text-white btn-sm" type="submit">Buscar</button>
+            </form>
             <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
@@ -49,13 +55,16 @@
                         <a class="nav-link text-white">Ayuda</a>
                     </li>
                 </ul>
-                <form class="d-flex mb-0 h1" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Buscar productos, y más" aria-label="Search">
-                    <button class="btn btn-outline-success text-white" type="submit">Buscar</button>
+                <form class="d-flex">
+                    <button class="btn btn-darkorange btn-sm" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        <span class="badge bg-light-black text-white ms-1 rounded-pill">0</span>
+                    </button>
                 </form>
                 <a href="/login/j">
-                    <input class="btn btn-secondary m-1" type="button" value="INICIAR">
+                    <input class="btn btn-darkorange m-1 btn-sm text-white" type="button" value="INICIAR">
                 </a>
+
             </div>
         </div>
     </nav>

@@ -80,7 +80,7 @@ class ProductosController extends Controller
         $producto->img=$image->getClientOriginalName();
         $producto->save();
 
-        return redirect()->back()->withSuccess('!!SE HA PUBLICADO UN NUEVO PRODUCTO!!');
+        return redirect('/consultar/producto/db/orpl');
     }
 
     /**
