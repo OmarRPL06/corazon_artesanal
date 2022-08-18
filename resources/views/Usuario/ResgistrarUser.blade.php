@@ -65,7 +65,7 @@
                     </div>
                     <div class="col-12">
                         <center>
-                            <button type="submit" class="btn btn-primary">Registrar</button>
+                            <button type="submit" class="btn btn-darkorange btn-sm text-white">Registrar datos</button>
                         </center>
                     </div>
                 </form>

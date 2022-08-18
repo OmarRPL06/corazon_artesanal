@@ -18,6 +18,15 @@ class ProductosController extends Controller
 
         // dd($productos);
 
+        return view('welcome', ['producto' => $productos]);
+    }
+
+    public function miProducto()
+    {
+        $productos = Productos::orderBy('created_at')->get();
+
+        // dd($productos);
+
         return view('Productos.ConsultarProducto', ['producto' => $productos]);
     }
 
@@ -80,7 +89,7 @@ class ProductosController extends Controller
         $producto->img=$image->getClientOriginalName();
         $producto->save();
 
-        return redirect()->back()->withSuccess('!!SE HA PUBLICADO UN NUEVO PRODUCTO!!');
+        return redirect('/consultar/producto/db/orpl');
     }
 
     /**

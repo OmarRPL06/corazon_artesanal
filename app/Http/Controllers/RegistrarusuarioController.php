@@ -36,7 +36,7 @@ class RegistrarusuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {   
+    {
 
         $this->validate($request, [
             'nombre' => ['required'],
@@ -58,12 +58,12 @@ class RegistrarusuarioController extends Controller
             'password.required'=>'Debes ingresar la contraseña de la cuenta',
             'password.min' => 'Debes ingresar una contraseña minino de 8 caracteres',
             'user.required'=>'Es necesario un usuario',
-            'user.min'=>'El tamaño minimo de tu usario es de 10 caracteres',
+            'user.min'=>'El tamaño minimo de tu usuario es de 10 caracteres',
             'user.max'=>'La longitud maxima de tu usuario es de 15 caracteres',
             'tipo.required' => 'Debes seleccionar el tipo de usuario'
         ]);
 
-        $registrarusuario = new registrarusuario;      
+        $registrarusuario = new registrarusuario;
         $registrarusuario->nombre=$request->input('nombre');
         $registrarusuario->apellido_Paterno=$request->input('apellido_Paterno');
         $registrarusuario->apellido_Materno=$request->input('apellido_Materno');
