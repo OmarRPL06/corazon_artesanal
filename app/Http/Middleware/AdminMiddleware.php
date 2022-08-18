@@ -22,7 +22,7 @@ class AdminMiddleware
         //     return redirect('/');
         // }
 
-        if (auth()->check() && auth()->user()->tipo == "admin")
+        if (auth()->check() && auth()->user()->tipo == "ADMIN")
             return $next($request);
 
         return redirect('/');

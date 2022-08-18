@@ -103,7 +103,7 @@ class RegistrarusuarioController extends Controller
      */
     public function edit($idUser)
     {
-        $usuario=Usuario::finOrFail($idUser);
+        $usuario=registrarusuario::finO0rFail($idUser);
         return view('Usuario.editUser',compact('usuario'));
     }
 

@@ -54,7 +54,7 @@ class SesionController extends Controller
      * @param  \App\Models\sesion  $sesion
      * @return \Illuminate\Http\Response
      */
-    public function show(sesion $sesion)
+    public function show(Request $sesion)
     {
         //
     }
@@ -65,7 +65,7 @@ class SesionController extends Controller
      * @param  \App\Models\sesion  $sesion
      * @return \Illuminate\Http\Response
      */
-    public function edit(sesion $sesion)
+    public function edit(Request $sesion)
     {
         //
     }
@@ -77,7 +77,7 @@ class SesionController extends Controller
      * @param  \App\Models\sesion  $sesion
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, sesion $sesion)
+    public function update(Request $request, Request $sesion)
     {
         //
     }
@@ -88,7 +88,7 @@ class SesionController extends Controller
      * @param  \App\Models\sesion  $sesion
      * @return \Illuminate\Http\Response
      */
-    public function destroy(sesion $sesion)
+    public function destroy(Request $sesion)
     {
         //
     }

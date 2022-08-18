@@ -46,9 +46,11 @@
                             <li><a class="dropdown-item" href="#">Sueteres</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ url('/consultar/producto/db/orpl') }}">Mis Productos</a>
-                    </li>
+                    @if (! Auth::guest())
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ url('/consultar/producto/db/orpl') }}">Mis Productos</a>
+                        </li>
+                    @endif
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Ofertas</a>
                     </li>
@@ -56,7 +58,7 @@
                         <a class="nav-link text-white">Moda</a>
                     </li>
                     <li class="nav-item ml-auto">
-                        <a class="nav-link text-white">Ayuda {{ Auth::check() }}</a>
+                        <a class="nav-link text-white">Ayuda</a>
                     </li>
                 </ul>
                 <form class="d-flex">
