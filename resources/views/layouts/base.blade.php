@@ -48,7 +48,16 @@
                     </li>
                     @if (! Auth::guest())
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ url('/consultar/producto/db/orpl') }}">Mis Productos</a>
+                            <a class="nav-link text-white" href="{{ url('/consultar/producto/db/orpl') }}">Mis Productos <i class="bi bi-bag-check-fill"></i></a>
+                        </li>
+                    @endif
+                    @if (! Auth::guest())
+                        <li class="nav-item">
+                            <a class="nav-link text-green" href="{{ url('/form/ubicacion') }}">Ubicación <i class="bi bi-geo-alt-fill"></i></a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link text-green parpadear" href="{{ url('/form/ubicacion') }}">Ubicación <i class="bi bi-geo-alt-fill"></i></a>
                         </li>
                     @endif
                     <li class="nav-item">
@@ -69,7 +78,7 @@
                 </form>
                 @if (Auth::guest())
                     <a href="{{ url('/login') }}" class="btn btn-darkorange m-1 btn-sm text-white"><i
-                            class="bi bi-box-arrow-in-right icon-logIn"></i> Ingresar</a>
+                            class="bi bi-box-arrow-in-left icon-logIn"></i> Ingresar</a>
                 @else
                     <a href="{{ url('/logout/session') }}" class="btn btn-darkorange m-1 btn-sm text-white"><i
                             class="bi bi-box-arrow-in-right icon-logOut"></i> Salir</a>

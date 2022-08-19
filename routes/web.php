@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrarusuarioController;
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\SesionController;
+use App\Http\Controllers\UbicacionController;
 
 
 // Rutas omar
@@ -15,6 +16,12 @@ Route::group(['middleware' => 'admin'], function () {
     Route::post('/registrar/producto/post/orpl', [ProductosController::class, 'store'])->name('registro.producto');
 });
 
+Route::get('/form/ubicacion', function () {
+    return view('Ubicacion.index');
+});
+
+Route::post('/ver/ubicacion', [UbicacionController::class, 'store'])->name('buscar.ubicacion');
+
 // Rutas de Jaime
 
 
@@ -22,7 +29,6 @@ Route::group(['middleware' => 'admin'], function () {
 Route::get('/registro/j', function () {
     return view('User.Registros');
 });
-
 
 // Rutas de Jeronimo
 Route::get('/user/jgc', [RegistrarusuarioController::class, 'create']);

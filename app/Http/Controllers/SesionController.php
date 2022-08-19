@@ -93,6 +93,14 @@ class SesionController extends Controller
         //
     }
 
+    public function loginApi(Request $request){
+        if(Auth::guard('api')->attempt(['email' => $request->input('u'), 'password' => $request->input('p')])){
+            return '{"Respuesta": "Usuario aceptado"}';
+        }
+        return '{"Respuesta": "Usuario no valido"}';
+
+    }
+
     public function logout(Request $request)
     {
         Auth::logout();

@@ -69,6 +69,13 @@
                                     ${{ $precio_real }}.00
                                 </div>
                             </div>
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
                             <!-- Product actions-->
                             <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
                                 <div class="text-center">
