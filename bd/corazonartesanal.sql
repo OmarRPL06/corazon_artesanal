@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table corazonartesanal.migrations: ~7 rows (approximately)
+-- Dumping data for table corazonartesanal.migrations: ~6 rows (approximately)
 INSERT IGNORE INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '2014_10_12_000000_create_users_table', 1),
 	(2, '2014_10_12_100000_create_password_resets_table', 1),
@@ -143,6 +143,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `tipo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_verified_at` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `api_token` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -150,9 +151,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `users_user_unique` (`user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table corazonartesanal.users: ~0 rows (approximately)
-INSERT IGNORE INTO `users` (`id`, `name`, `apellidoPaterno`, `apellidoMaterno`, `telefono`, `email`, `user`, `password`, `tipo`, `email_verified_at`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(2, 'Administrator', 'Administrator', 'Administrator', '9191735421', 'admin@gmail.com', 'Administrador', '$2y$10$KW7StiFrPujeHlZ0JFf74uVK9h3NOdu8w2pspEN61j/O4kOHW.Vji', 'ADMIN', '2022-08-18 17:15:36', 'g1Q5D7PW4PlpPuled990NKpssuN3eQPKLznOJ6cnYu3QdKcQZdD9XckLKGb0', '2022-08-18 22:15:36', '2022-08-18 22:15:36');
+-- Dumping data for table corazonartesanal.users: ~2 rows (approximately)
+INSERT IGNORE INTO `users` (`id`, `name`, `apellidoPaterno`, `apellidoMaterno`, `telefono`, `email`, `user`, `password`, `tipo`, `email_verified_at`, `remember_token`, `api_token`, `created_at`, `updated_at`) VALUES
+	(2, 'Administrator', 'Administrator', 'Administrator', '9191735421', 'admin@gmail.com', 'Administrador', '$2y$10$KW7StiFrPujeHlZ0JFf74uVK9h3NOdu8w2pspEN61j/O4kOHW.Vji', 'ADMIN', '2022-08-18 17:15:36', 'joGvCfX2gjm7BrBRiW6Yo6cf2l2UF4yK6IasBsYiQzFmqXRm3MfGbjcBqfBI', NULL, '2022-08-18 22:15:36', '2022-08-18 22:15:36');
 
 -- Dumping structure for table corazonartesanal.users_old
 CREATE TABLE IF NOT EXISTS `users_old` (
