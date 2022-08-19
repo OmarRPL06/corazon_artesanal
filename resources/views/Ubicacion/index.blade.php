@@ -145,26 +145,4 @@
     </div>
     @include('includes.footer')
 @endsection
-@php
-$latitude = null;
-$longitude = null;
-@endphp
-<script src="gmaps.min.js"></script>
-<script type="text/javascript">
-    var map;
-    $(document).ready(function() {
-        map = new GMaps({
-            div: '#map',
-            lat: {{ $latitude }},
-            lng: {{ $longitude }},
-            zoom: 16,
-            mapTypeId: google.maps.MapTypeId.HYBRID
-        });
 
-        map.addMarker({
-            lat: {{ $latitude }},
-            lng: {{ $longitude }}
-
-        });
-    });
-</script>
