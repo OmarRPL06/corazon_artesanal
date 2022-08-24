@@ -3,8 +3,7 @@
     <div class="container-card">
         <div class="card">
             <div class="card-header">
-                <div class="card-title-orpl text-center">Bienvenido, Verifica la distancia y el tiempo de recorrido en llegar
-                    a la empresa NAHUTEC...</div>
+                <div class="card-title-orpl text-center">Bienvenido, Verifica la distancia y el tiempo de recorrido en llegar a la empresa NAHUTEC...</div>
             </div>
             <div class="container-form-map">
                 <div class="row">

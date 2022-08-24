@@ -51,7 +51,7 @@
         <li class="nav__item">
             <h2 class="nav__title">Metodo de pago:</h2>
             <ul class="nav__ul">
-                <li>
+                <li>ssssssssss
                     <a href="#">Tarjeta de credito</a>
                 </li>
                 <li>

@@ -20,7 +20,8 @@
                             <div class="col mb-5">
                                 <div class="card h-100 alto">
                                     <!-- Product image-->
-                                    <img class="card-img-top" src="{{ asset("/uploads/$productos->img") }}" alt="..." />
+                                    <img class="card-img-top" src="{{ asset("/uploads/$productos->img") }}"
+                                        alt="..." />
                                     <!-- Product details-->
                                     <div class="card-body p-3">
                                         <div class="text-center">
@@ -32,7 +33,8 @@
                                                 $precio_real = $precio + $iva;
                                             @endphp
                                             <!--  -->
-                                            <p>{{ $productos->tipo }}, Talla: {{ $productos->talla }}, {{ $productos->modelo }}</p>
+                                            <p>{{ $productos->tipo }}, Talla: {{ $productos->talla }},
+                                                {{ $productos->modelo }}</p>
                                             <p>Color: {{ $productos->color }}</p>
                                             <p>Existencia: {{ $productos->existencia }}</p>
                                             <!-- Product price-->
@@ -50,15 +52,36 @@
                                     <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
                                         <div class="text-center">
                                             <a class="btn btn-outline-dark mt-auto btn-sm" href="#">Comprar</a>
-                                            <button class="btn btn-darkorange btn-sm" type="submit">
-                                                <i class="bi-cart-fill me-1"><a href="#"></a></i>
+                                            <a class="btn btn-darkorange btn-sm" href="#">
+                                                <i class="bi-cart-fill me-1"></i>
+                                            </a>
+                                            <a class="btn btn-darkorange btn-sm" href="#">
+                                                <i class="bi bi-pencil-fill me-1"></i>
+                                            </a>
+                                            <button class="btn btn-darkorange btn-sm" data-bs-toggle="modal" data-bs-target="#VentanaEliminar">
+                                                <i class="bi bi-trash-fill me-1"></i>
                                             </button>
-                                            <button class="btn btn-darkorange btn-sm" type="submit">
-                                                <i class="bi bi-pencil-fill me-1"><a href="#"></a></i>
-                                            </button>
-                                            <button class="btn btn-darkorange btn-sm" type="submit">
-                                                <i class="bi bi-trash-fill me-1"><a href="#"></a></i>
-                                            </button>
+                                        </div>
+                                    </div>
+                                      <!-- Modal -->
+                                    <div class="modal fade" id="VentanaEliminar" tabindex="-1"
+                                        aria-labelledby="VentanaEliminar" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="VentanaEliminar">Eliminar producto...</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close">
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h6><b>{{ auth()->user()->name }}</b>: ¿Desea eliminar el producto?</h6>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <a class="btn btn-danger btn-sm"href="{{ url('/eliminar/producto/orpl/' . $productos->idProducto) }}">Eliminar</a>
+                                                    <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Cancelar</button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
