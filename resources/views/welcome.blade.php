@@ -62,9 +62,9 @@
                                         $precio_real = $precio + $iva;
                                     @endphp
                                     <!--  -->
-                                    <p>{{ $productos->tipo }}, Talla: {{ $productos->talla }}, {{ $productos->modelo }}</p>
+                                    <!--<p>{{ $productos->tipo }}, Talla: {{ $productos->talla }}, {{ $productos->modelo }}</p>
                                     <p>Color: {{ $productos->color }}</p>
-                                    <p>Existencia: {{ $productos->existencia }}</p>
+                                    <p>Existencia: {{ $productos->existencia }}</p>-->
                                     <!-- Product price-->
                                     ${{ $precio_real }}.00
                                 </div>
