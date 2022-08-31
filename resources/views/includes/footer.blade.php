@@ -1,72 +1,92 @@
-<footer class="footer bg-light-black text-white">
-    <div class="footer__addr">
-        <h4><a href="/politicas/AvisoPrivacidad.pdf" class="text-white" target="_blanck">Aviso de privacidad</a></h4>
-        <h2>Dirección:</h2>
-        <address>barrio Guadalupe, en la ciudad de Ocosingo.
-            <br>
-            <a class="footer__btn btn-darkorange text-white" href="corazonartesanal2022@gmail.com">Envíanos un correo electrónico</a>
-        </address>
-    </div>
-
-    <ul class="footer__nav">
-        <li class="nav__item">
-            <h2 class="nav__title">Medios de comunicación:</h2>
-            <ul class="nav__ul">
-                <li>
-                    <a href="#">Facebook</a>
-                </li>
-                <li>
-                    <a href="#">WhatsApp</a>
-                </li>
-                <li>
-                    <a href="#">Instagram</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="nav__item nav__item--extra">
-            <h2 class="nav__title">Tecnologías:</h2>
-            <ul class="nav__ul nav__ul--extra">
-                <li>
-                    <a href="#">Diseño de hardware</a>
-                </li>
-                <li>
-                    <a href="#">Diseño de software</a>
-                </li>
-                <li>
-                    <a href="#">Señalización digital</a>
-                </li>
-                <li>
-                    <a href="#">Automatización</a>
-                </li>
-                <li>
-                    <a href="#">Inteligencia artificial</a>
-                </li>
-                <li>
-                    <a href="#">Internet de las cosas</a>
-                </li>
-            </ul>
-        </li>
-
-        <li class="nav__item">
-            <h2 class="nav__title">Metodo de pago:</h2>
-            <ul class="nav__ul">
-                <li>ssssssssss
-                    <a href="#">Tarjeta de credito</a>
-                </li>
-                <li>
-                    <a href="#">Tarjeta de debito</a>
-                </li>
-                <li>
-                    <a href="#">Tarjeta azteca</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-    <div class="legal">
-        <p>(NAHUTEC) Corazón Artesanal 2022 &copy; Todos los derechos reservados.</p>
-        <div class="legal__links">
-            <span>Hecho con <span class="heart color-darkorange">♥</span> Artesanal</span>
-        </div>
-    </div>
-</footer>
+ <!-- Start Footer Area -->
+	<footer class="footer">
+		<!-- Footer Top -->
+		<div class="footer-top section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer about">
+							<div class="logo">
+								<a href="{{ url('/') }}"><img src="/ecommerce/images/logo2.png" alt="#"></a>
+							</div>
+							<p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue,  magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+							<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">+0123 456 789</a></span></p>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+					<div class="col-lg-2 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer links">
+							<h4>Information</h4>
+							<ul>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Faq</a></li>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Contact Us</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+					<div class="col-lg-2 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer links">
+							<h4>Customer Service</h4>
+							<ul>
+								<li><a href="#">Payment Methods</a></li>
+								<li><a href="#">Money-back</a></li>
+								<li><a href="#">Returns</a></li>
+								<li><a href="#">Shipping</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Single Widget -->
+						<div class="single-footer social">
+							<h4>Get In Tuch</h4>
+							<!-- Single Widget -->
+							<div class="contact">
+								<ul>
+									<li>NO. 342 - London Oxford Street.</li>
+									<li>012 United Kingdom.</li>
+									<li>info@eshop.com</li>
+									<li>+032 3456 7890</li>
+								</ul>
+							</div>
+							<!-- End Single Widget -->
+							<ul>
+								<li><a href="#"><i class="ti-facebook"></i></a></li>
+								<li><a href="#"><i class="ti-twitter"></i></a></li>
+								<li><a href="#"><i class="ti-flickr"></i></a></li>
+								<li><a href="#"><i class="ti-instagram"></i></a></li>
+							</ul>
+						</div>
+						<!-- End Single Widget -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Footer Top -->
+		<div class="copyright">
+			<div class="container">
+				<div class="inner">
+					<div class="row">
+						<div class="col-lg-6 col-12">
+							<div class="left">
+								<p>Copyright © 2020 <a href="http://www.wpthemesgrid.com" target="_blank">Wpthemesgrid</a>  -  All Rights Reserved.</p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-12">
+							<div class="right">
+								<img src="/ecommerce/images/payments.png" alt="#">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /End Footer Area -->

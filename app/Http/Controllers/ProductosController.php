@@ -11,7 +11,7 @@ class ProductosController extends Controller
     {
         $productos = Productos::orderBy('created_at')->get();
 
-        return view('welcome', ['producto' => $productos]);
+        return view('index', ['producto' => $productos]);
     }
 
     public function miProducto()
@@ -31,7 +31,6 @@ class ProductosController extends Controller
         $this->validate(
             $request,
             [
-                'idUser' => 'required',
                 'nombre_producto' => 'required',
                 'tipo' => 'required',
                 'modelo' => 'required',
@@ -43,7 +42,6 @@ class ProductosController extends Controller
                 'img' => 'required|image',
             ],
             [
-                'idUser.required' => 'Tiene que tener una cuenta para poder registrar',
                 'nombre_producto.required' => 'Debe de agregar el nombre del producto',
                 'tipo.required' => 'Debe de agregar el tipo de producto',
                 'modelo.required' => 'Ingrese el modelo del producto',
@@ -61,7 +59,7 @@ class ProductosController extends Controller
         $image->move('uploads', $image->getClientOriginalName());
 
         $producto = new Productos();
-        $producto->idUser = $request->input('idUser');
+        $producto->idUser = auth()->user()->id;
         $producto->nombreProducto = $request->input('nombre_producto');
         $producto->tipo = $request->input('tipo');
         $producto->modelo = $request->input('modelo');
@@ -95,9 +93,10 @@ class ProductosController extends Controller
     {
         $producto = Productos::find($id);
 
+        unlink("uploads/$producto->img");
+
         $producto->delete($producto);
 
         return redirect('/consultar/producto/db/orpl');
-
     }
 }

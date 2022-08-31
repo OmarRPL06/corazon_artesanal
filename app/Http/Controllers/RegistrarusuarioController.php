@@ -26,7 +26,7 @@ class RegistrarusuarioController extends Controller
     public function create()
     {
 
-        return view("Usuario.ResgistrarUser");
+        return view("Usuario.RegistrarUsuario");
     }
 
     /**

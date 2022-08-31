@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.base_old')
 @section('contenido')
     <!-- Inicio Slider -->
     <div id="carouselExampleDark" class="carousel slide slide-top" data-bs-ride="carousel">
@@ -27,7 +27,7 @@
                 <center><img src="/imagenes/f13.jpg" class="d-block img-slider" width="700" height="380"></center>
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Creación de telas artesanales</h5>
-                    <p>Gran calidad en de las prendas a vender.</p>
+                    <p>Gran calidad en las prendas a vender.</p>
                 </div>
             </div>
         </div>
@@ -92,5 +92,5 @@
         </div>
     </section>
 
-    @include('includes.footer')
+    @include('includes.footer_old')
 @endsection

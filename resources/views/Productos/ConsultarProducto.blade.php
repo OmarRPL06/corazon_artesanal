@@ -1,96 +1,63 @@
-@extends('layouts.base')
+@extends('layouts.Base2')
 @section('contenido')
-    <div class="container-card">
-        <div class="card">
-            <div class="card-header">
-                <div class="align-left">
-                    <div class="card-title-orpl">Mis Productos en Venta</div>
-                </div>
-                <div class="align-right">
-                    <a href="{{ url('/registrar/producto/orpl') }}" class="btn btn-darkorange btn-sm text-white">Subir
-                        Producto +</a>
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bread-inner">
+                    <ul class="bread-list">
+                        <li><a href="{{ url('/') }}">Inicio<i class="ti-arrow-right"></i></a></li>
+                        <li class="active">Mis Productos</li>
+                    </ul>
                 </div>
             </div>
-            <!-- Section-->
-            <section class="py-5">
-                <div class="container px-4 px-lg-5 mt-5">
-                    <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                        @foreach ($producto as $productos)
-                            <div class="col mb-5">
-                                <div class="card h-100 alto">
-                                    <!-- Product image-->
-                                    <img class="card-img-top" src="{{ asset("/uploads/$productos->img") }}"
-                                        alt="..." />
-                                    <!-- Product details-->
-                                    <div class="card-body p-3">
-                                        <div class="text-center">
-                                            <!-- Product name-->
-                                            <h6 class="fw-bolder">{{ $productos->nombreProducto }}</h6>
-                                            @php
-                                                $precio = $productos->precio;
-                                                $iva = $productos->iva;
-                                                $precio_real = $precio + $iva;
-                                            @endphp
-                                            <!--  -->
-                                            <!--<p>{{ $productos->tipo }}, Talla: {{ $productos->talla }},
-                                                {{ $productos->modelo }}</p>
-                                            <p>Color: {{ $productos->color }}</p>
-                                            <p>Existencia: {{ $productos->existencia }}</p>-->
-                                            <!-- Product price-->
-                                            ${{ $precio_real }}.00
-                                        </div>
-                                    </div>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product actions-->
-                                    <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
-                                        <div class="text-center">
-                                            <a class="btn btn-outline-dark mt-auto btn-sm" href="#">Comprar</a>
-                                            <a class="btn btn-darkorange btn-sm" href="#">
-                                                <i class="bi-cart-fill me-1"></i>
-                                            </a>
-                                            <a class="btn btn-darkorange btn-sm" href="#">
-                                                <i class="bi bi-pencil-fill me-1"></i>
-                                            </a>
-                                            <button class="btn btn-darkorange btn-sm" data-bs-toggle="modal" data-bs-target="#VentanaEliminar">
-                                                <i class="bi bi-trash-fill me-1"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                      <!-- Modal -->
-                                    <div class="modal fade" id="VentanaEliminar" tabindex="-1"
-                                        aria-labelledby="VentanaEliminar" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="VentanaEliminar">Eliminar producto...</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close">
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <h6><b>{{ auth()->user()->name }}</b>: ¿Desea eliminar el producto?</h6>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <a class="btn btn-danger btn-sm"href="{{ url('/eliminar/producto/orpl/' . $productos->idProducto) }}">Eliminar</a>
-                                                    <button type="button" class="btn btn-success btn-sm" data-bs-dismiss="modal">Cancelar</button>
-                                                </div>
-                                            </div>
-                                        </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<section class="contact-us section padding-contact-orlp">
+    <div class="container">
+        <div class="contact-head">
+            <div class="form-main">
+                <div class="row">
+                    <div class="section-title text-center">
+                        <h2>Mis productos en venta</h2>
+                    </div>
+                    @foreach ($producto as $productos)
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-12">
+                        <div class="single-product alto">
+                            <div class="product-img img-container">
+                                <a href="product-details.html">
+                                    <img class="default-img " src="{{ asset("/uploads/$productos->img") }}" alt="#">
+                                    <img class="hover-img" src="{{ asset("/uploads/$productos->img") }}" alt="#">
+                                </a>
+                                <div class="button-head">
+                                    <div class="product-action-2 product-content-padding">
+                                        <a title="Agregar al carrito" href="#">Agregar al carrito</a>
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                            <div class="product-content product-content-padding">
+                                <h3><a href="product-details.html">{{ $productos->nombreProducto }}</a></h3>
+                                <div class="product-price color-green">
+                                    @php
+                                    $precio = $productos->precio;
+                                    $iva = $productos->iva;
+                                    $precio_real = $precio + $iva;
+                                    @endphp
+                                    <span>${{ $precio_real }}.00</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    @endforeach
                 </div>
-            </section>
-            <!-- Fin section -->
+            </div>
         </div>
     </div>
-    @include('includes.footer')
+</section>
+@include('includes.Footer')
 @endsection

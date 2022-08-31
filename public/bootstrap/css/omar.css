@@ -96,6 +96,11 @@
     color: greenyellow !important;
 }
 
+.bold {
+    font-weight: 600;
+    font-size: 16px;
+}
+
 .parpadear {
 
     animation-name: parpadeo;
@@ -103,28 +108,52 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 
-    -webkit-animation-name:parpadeo;
+    -webkit-animation-name: parpadeo;
     -webkit-animation-duration: 1s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
 }
 
-@-moz-keyframes parpadeo{
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
+@-moz-keyframes parpadeo {
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
 }
 
 @-webkit-keyframes parpadeo {
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-     100% { opacity: 1.0; }
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
 }
 
 @keyframes parpadeo {
-    0% { opacity: 1.0; }
-     50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
+    0% {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1.0;
+    }
 }
 
 
@@ -138,19 +167,23 @@
 .img-slider {
     border-radius: 8px;
     overflow: hidden;
-    -webkit-transition:all .9s ease; /* Safari y Chrome */
-    -moz-transition:all .9s ease; /* Firefox */
-    -o-transition:all .9s ease; /* IE 9 */
-    -ms-transition:all .9s ease; /* Opera */
+    -webkit-transition: all .9s ease;
+    /* Safari y Chrome */
+    -moz-transition: all .9s ease;
+    /* Firefox */
+    -o-transition: all .9s ease;
+    /* IE 9 */
+    -ms-transition: all .9s ease;
+    /* Opera */
 }
 
 .img-slider:hover {
     /* opacity: 0.9; */
-    -webkit-transform:scale(1.25);
-    -moz-transform:scale(1.25);
-    -ms-transform:scale(1.25);
-    -o-transform:scale(1.25);
-    transform:scale(1.25);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
 }
 
 
@@ -158,7 +191,7 @@
 
 /* Sombra */
 .alto {
-    box-shadow: 3px 3px 5px #999;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 /* etiquetas aliniados a la ozquierda */
@@ -173,4 +206,50 @@
 /* Cambiar color al pasar el cursos en cualquier boton */
 .btn-jps:hover {
     background-color: black;
+}
+
+/* imagen proporcional de los productos */
+
+.img-container {
+    margin: auto;
+    width: 550 !important;
+    height: 280px !important;
+    overflow: hidden !important;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    /* border-style: solid; */
+    /* border-color: #c4ecec; */
+    padding: 5px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* apartado de los productos home, paading en el titulo del producto */
+
+.product-content-padding {
+    padding: 10px;
+    text-align: justify;
+}
+
+/* padding del mapa en contactos */
+
+.map-section {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+/* padding apartado contactos */
+
+.padding-contact-orlp {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.color-green {
+    color: #0cac5c;
 }

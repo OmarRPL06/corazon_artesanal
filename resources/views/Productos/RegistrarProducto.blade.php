@@ -1,86 +1,150 @@
-@extends('layouts.base')
+@extends('layouts.Base2')
 @section('contenido')
 
-    <div class="container-card">
-        <div class="card">
-            <div class="card-header">
-                <div class="card-title-orpl text-center">Vender Producto</div>
-            </div>
-            <div class="container-form">
-                <div id="message">
-                    @if (session('success'))
-                        <div class="alert alert-success text-center" role="alert">{{ session('success') }}</div>
-                    @endif
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bread-inner">
+                    <ul class="bread-list">
+                        <li><a href="{{ url('/') }}">Inicio<i class="ti-arrow-right"></i></a></li>
+                        <li class="active"><a href="{{ url('/consultar/producto/db/orpl') }}">Mis Productos<i
+                                    class="ti-arrow-right"></i></a></li>
+                        <li class="active">Vender Producto</li>
+                    </ul>
                 </div>
-                @if (count($errors) > 0)
-                    <div class="alert alert-danger" role="alert">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li> -> {!! $error !!}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-                <form id="forms" class="row g-3 font-sans-serif-orpl" action="{{ route('registro.producto') }}"
-                    method="POST" enctype="multipart/form-data">
-                    @csrf
-                    <div class="col-12">
-                        <label for="" class="form-label">Nombre del producto:</label>
-                        <input type="text" class="form-control font-sans-serif-form-orpl" id=""
-                            name="nombre_producto" placeholder="Ingrese el nombre del producto" required>
-                        <input type="hidden" name="idUser" value="1">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="" class="form-label">Tipo de Producto:</label>
-                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="tipo"
-                            placeholder="Ejemplo: Playeras, Pantalon, Shorts, Gorras, etc..." required>
-                    </div>
-                    <div class="col-4">
-                        <label for="" class="form-label">Modelo del Producto:</label>
-                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="modelo"
-                            placeholder="Ejemplo:" required>
-                    </div>
-                    <div class="col-md-2">
-                        <label for="" class="form-label">Existencia:</label>
-                        <input type="number" class="form-control font-sans-serif-form-orpl" id=""
-                            name="existencia" placeholder="Ejmp: 1" required>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="" class="form-label">Talla:</label>
-                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="talla"
-                            placeholder="Ingrese su numero de telefono..." required>
-                    </div>
-                    <div class="col-3">
-                        <label for="" class="form-label">Color:</label>
-                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="color"
-                            placeholder="Ingrese el numero de la calle..." required>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="" class="form-label">Precio:</label>
-                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="precio"
-                            placeholder="Ingrese la colonia de donde vive..." required>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="" class="form-label">IVA:</label>
-                        <input type="text" class="form-control font-sans-serif-form-orpl" id="" name="iva"
-                            placeholder="Ingrese la colonia de donde vive..." required>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="" class="form-label">Imagen del producto:</label>
-                        <input type="file" class="form-control font-sans-serif-form-orpl" id="" name="img"
-                            placeholder="Ingrese el Estado..." required accept="image/*">
-                    </div>
-                    <div class="col-12">
-                        <center>
-                            <button type="submit" class="btn btn-success btn-sm">Registrar</button>
-                            <a href="{{ url('/consultar/producto/db/orpl') }}" class="btn btn-danger btn-sm">Cancelar</a>
-                        </center>
-                    </div>
-                </form>
             </div>
         </div>
     </div>
+</div>
+<!-- End Breadcrumbs -->
 
-    @include('includes.footer')
+<section class="contact-us section padding-contact-orlp">
+    <div class="container">
+        <div class="contact-head">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <div class="form-main">
+                        <div class="section-title text-center">
+                            <h2>Apartado para vender playeras/Blusas</h2>
+                        </div>
+                        @if (count($errors) > 0)
+                        <div class="alert alert-danger" role="alert">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li> -> {!! $error !!}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        <form class="form bold" action="{{ route('registro.producto') }}" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>Indica el nombre del producto:<span>*</span></label>
+                                        <input type="text" name="nombre_producto"
+                                            placeholder="Ej..: Playera Mexicana De Hombre Pantera Moda Original Artesanal"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Precio $00.00 MX:<span>*</span></label>
+                                        <input name="precio" type="text" placeholder="Ingrese el precio..." required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Marca:<span>*</span></label>
+                                        <input name="tipo" type="text" placeholder="Ingrese la marca..." required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Modelo:<span>*</span></label>
+                                        <input name="tipo" type="text" placeholder="Ingrese el modelo..." required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Tipo de tela:<span>*</span></label>
+                                        <input name="tipo" type="text" placeholder="Ingrese el tipo de tela..."
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Estado del Producto:<span>*</span></label>
+                                        <select name="estado" class="form-control font-sans-serif-form-orpl">
+                                            <option>Elige una opción</option>
+                                            <option>Nuevo</option>
+                                            <option>Usado - Como nuevo</option>
+                                            <option>Usado - Buen estado</option>
+                                            <option>Usado - Aceptable</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Color:<span>*</span></label>
+                                        <input name="color" type="text" placeholder="Ingrese el color.." required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Talla:<span>*</span></label>
+                                        <input name="talla" type="text" placeholder="Ingrese la talla..." required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Tipo de manga:<span>*</span></label>
+                                        <input name="manga" type="text" placeholder="Ingrese el tipo de manga..."
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Tipo de cuello:<span>*</span></label>
+                                        <input name="cuello" type="text" placeholder="Ingrese el tipo de cuello..."
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Existencia:<span>*</span></label>
+                                        <input name="existencia" type="text" placeholder="Ejemplo: 3" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>IVA / 0<span>*</span></label>
+                                        <input name="iva" type="text" placeholder="Ingrese el iva o coloque 0..."
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <label>Imagen del producto<span>*</span></label>
+                                        <input class="form-control" name="img" type="file"
+                                            placeholder="Ingrese el Estado..." required accept="image/*">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group button text-center">
+                                        <button type="submit" class="btn ">Publicar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Contact -->
+
+@include('includes.Footer')
 @endsection
-

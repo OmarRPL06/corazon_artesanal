@@ -14,6 +14,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/ecommerce/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="/ecommerce/css/magnific-popup.min.css">
     <!-- Font Awesome -->
@@ -72,15 +73,13 @@
                         <!-- Top Right -->
                         <div class="right-content">
                             <ul class="list-main">
-                                <li><i class="ti-location-pin"></i><a href="{{ url('/form/ubicacion') }}">Ubicación</a>
-                                </li>
+                                <li><i class="ti-location-pin"></i> <a href="{{ url('/form/ubicacion') }}">Ubicación</a></li>
                                 <li><i class="ti-info"></i> <a href="#">Nosotros</a></li>
                                 <li><i class="ti-user"></i> <a href="#">Mi Cuenta</a></li>
                                 @if (Auth::guest())
-                                <li><i class="ti-power-off"></i><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
+                                    <li><i class="ti-power-off"></i><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
                                 @else
-                                <li><i class="ti-power-off"></i><a href="{{ url('/logout/session') }}">Cerrar Sesión</a>
-                                </li>
+                                    <li><i class="ti-power-off"></i><a href="{{ url('/logout/session') }}">Cerrar Sesión</a></li>
                                 @endif
                             </ul>
                         </div>
@@ -173,21 +172,6 @@
             <div class="container">
                 <div class="cat-nav-head">
                     <div class="row">
-                        <div class="col-lg-3">
-                            <div class="all-category">
-                                <h3 class="cat-heading"><i class="fa fa-bars" aria-hidden="true"></i>CATEGORÍAS</h3>
-                                <ul class="main-category">
-                                    <li><a href="#">Categoría 3</a></li>
-                                    <li><a href="#">Categoría 4</a></li>
-                                    <li><a href="#">Categoría 5</a></li>
-                                    <li><a href="#">Categoría 6</a></li>
-                                    <li><a href="#">Categoría 7</a></li>
-                                    <li><a href="#">Categoría 8</a></li>
-                                    <li><a href="#">Categoría 9</a></li>
-                                    <li><a href="#">Categoría 10</a></li>
-                                </ul>
-                            </div>
-                        </div>
                         <div class="col-lg-9 col-12">
                             <div class="menu-area">
                                 <!-- Main Menu -->
@@ -195,7 +179,8 @@
                                     <div class="navbar-collapse">
                                         <div class="nav-inner">
                                             <ul class="nav main-menu menu navbar-nav">
-                                                <li class="active"><a href="#">Ofertas</a></li>
+                                                <li class="active"><a href="{{ url('/') }}">Inicio</a></li>
+                                                <li><a href="#">Ofertas</a></li>
                                                 <li><a href="#">Historial</a></li>
                                                 @if (! Auth::guest())
                                                     <li><a href="#">Vender<i class="ti-angle-down"></i>
@@ -210,7 +195,7 @@
                                                         <!--<span class="new">Nuevo</span>--></a>
                                                     <ul class="dropdown">
                                                         <li><a href="cart.html">Carrito</a></li>
-                                                        <li><a href="checkout.html">Verificar pago</a></li>
+                                                        <li><a href="checkout.html">Verificar</a></li>
                                                     </ul>
                                                 </li>
                                                 <li><a href="#">Paginas</a></li>
