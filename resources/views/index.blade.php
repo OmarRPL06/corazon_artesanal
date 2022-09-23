@@ -50,17 +50,19 @@
                                             <div class="single-product alto">
                                                 <div class="product-img img-container">
                                                     <a href="product-details.html">
-                                                        <img class="default-img " src="{{ asset("/uploads/$productos->img") }}" alt="#">
+                                                        <img class="default-img" src="{{ asset("/uploads/$productos->img") }}" alt="#">
                                                         <img class="hover-img" src="{{ asset("/uploads/$productos->img") }}" alt="#">
                                                     </a>
                                                     <div class="button-head">
-                                                        <div class="product-action-2 product-content-padding">
+                                                        <div class="product-action padding-right-10">
+                                                            <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
+                                                        </div>
+                                                        <div class="product-action-2 padding-left-10">
                                                             <a title="Agregar al carrito" href="#">Agregar al carrito</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="product-content product-content-padding">
-                                                    <h3><a href="product-details.html">{{ $productos->nombreProducto }}</a></h3>
                                                     <div class="product-price color-green">
                                                         @php
                                                             $precio = $productos->precio;
@@ -69,6 +71,7 @@
                                                         @endphp
                                                         <span>${{ $precio_real }}.00</span>
                                                     </div>
+                                                    <h3><a href="product-details.html">{{ $productos->nombreProducto }}</a></h3>
                                                 </div>
                                             </div>
                                         </div>
@@ -87,5 +90,5 @@
 <!-- End Product Area -->
 
 
-@include('includes.Footer')
+@include('includes.footer')
 @endsection

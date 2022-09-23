@@ -10,21 +10,24 @@
 							<div class="logo">
 								<a href="{{ url('/') }}"><img src="/ecommerce/images/logo2.png" alt="#"></a>
 							</div>
-							<p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue,  magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-							<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">+0123 456 789</a></span></p>
+							<p class="text">
+                                NAHUTEC, es una empresa muy reciente el cual a dado en marcha el proyecto de corazón artesanal,
+                                una aplicación web, donde los artesanos podrán vender sus productos en linea.
+                            </p>
+							<p class="call">¿Tienes una pregunta? Llámanos 24/7<span><a href="tel:123456789">+52 9191735421</a></span></p>
 						</div>
 						<!-- End Single Widget -->
 					</div>
 					<div class="col-lg-2 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>Information</h4>
+							<h4>Información</h4>
 							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Faq</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Help</a></li>
+								<li><a href="#">Sobre nosotros</a></li>
+								<li><a href="#">FPreguntas más frecuentes</a></li>
+								<li><a href="#">Términos y condiciones</a></li>
+								<li><a href="#">Contáctenos</a></li>
+								<li><a href="#">Ayuda</a></li>
 							</ul>
 						</div>
 						<!-- End Single Widget -->
@@ -32,13 +35,13 @@
 					<div class="col-lg-2 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>Customer Service</h4>
+							<h4>Servicios al cliente</h4>
 							<ul>
-								<li><a href="#">Payment Methods</a></li>
-								<li><a href="#">Money-back</a></li>
-								<li><a href="#">Returns</a></li>
-								<li><a href="#">Shipping</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Métodos de pago</a></li>
+								<li><a href="#">Devolución de dinero</a></li>
+								<li><a href="#">Devoluciones</a></li>
+								<li><a href="#">Transporte</a></li>
+								<li><a href="#">Politica de provacidad</a></li>
 							</ul>
 						</div>
 						<!-- End Single Widget -->
@@ -46,14 +49,14 @@
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
-							<h4>Get In Tuch</h4>
+							<h4>Ponerse en contacto</h4>
 							<!-- Single Widget -->
 							<div class="contact">
 								<ul>
-									<li>NO. 342 - London Oxford Street.</li>
-									<li>012 United Kingdom.</li>
-									<li>info@eshop.com</li>
-									<li>+032 3456 7890</li>
+									<li>Ocosingo Chiapas.</li>
+									<li>Barrio Guadalupe.</li>
+									<li>soporte_artesanal@gmail.com</li>
+									<li>+52 9191735421</li>
 								</ul>
 							</div>
 							<!-- End Single Widget -->
@@ -76,7 +79,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
-								<p>Copyright © 2020 <a href="http://www.wpthemesgrid.com" target="_blank">Wpthemesgrid</a>  -  All Rights Reserved.</p>
+								<p>Copyright © 2022  Corazón Artesanal -  Todos los derechos reservados.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">

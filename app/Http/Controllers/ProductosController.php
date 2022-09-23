@@ -23,7 +23,7 @@ class ProductosController extends Controller
 
     public function create()
     {
-        return view('Productos.RegistrarProducto');
+        return view('Productos.RegistrarRopas');
     }
 
     public function store(Request $request)

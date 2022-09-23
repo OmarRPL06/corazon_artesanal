@@ -218,8 +218,6 @@
     display: flex;
     align-items: center;
     border-radius: 5px;
-    /* border-style: solid; */
-    /* border-color: #c4ecec; */
     padding: 5px;
 }
 
@@ -232,7 +230,6 @@
 
 .product-content-padding {
     padding: 10px;
-    text-align: justify;
 }
 
 /* padding del mapa en contactos */

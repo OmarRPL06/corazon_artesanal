@@ -9,9 +9,8 @@
                 <div class="bread-inner">
                     <ul class="bread-list">
                         <li><a href="{{ url('/') }}">Inicio<i class="ti-arrow-right"></i></a></li>
-                        <li class="active"><a href="{{ url('/consultar/producto/db/orpl') }}">Mis Productos<i
-                                    class="ti-arrow-right"></i></a></li>
-                        <li class="active">Vender Producto</li>
+                        <li class="active"><a href="{{ url('/tipo/producto') }}">Tipo de producto<i class="ti-arrow-right"></i></a></li>
+                        <li class="active">Vender Ropas</li>
                     </ul>
                 </div>
             </div>
@@ -27,7 +26,7 @@
                 <div class="col-lg-12 col-12">
                     <div class="form-main">
                         <div class="section-title text-center">
-                            <h2>Apartado para vender playeras/Blusas</h2>
+                            <h2>Apartado para vender Accesorios Artesanales</h2>
                         </div>
                         @if (count($errors) > 0)
                         <div class="alert alert-danger" role="alert">
@@ -146,5 +145,5 @@
 </section>
 <!--/ End Contact -->
 
-@include('includes.Footer')
+@include('includes.footer')
 @endsection

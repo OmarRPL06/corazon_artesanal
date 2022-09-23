@@ -115,6 +115,6 @@
     </div>
 	<!--/ End Map Section -->
 
-@include('includes.Footer')
+@include('includes.footer')
 @endsection
 

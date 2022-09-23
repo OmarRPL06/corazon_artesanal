@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="/ecommerce/style.css">
     <link rel="stylesheet" href="/ecommerce/css/responsive.css">
     <link rel="stylesheet" href="/bootstrap/css/omar.css">
+    <link rel="stylesheet" href="/bootstrap/css/padding.css">
 </head>
 
 <body class="js">
@@ -72,14 +73,14 @@
                         <!-- Top Right -->
                         <div class="right-content">
                             <ul class="list-main">
-                                <li><i class="ti-location-pin"></i><a href="{{ url('/form/ubicacion') }}">Ubicación</a>
+                                <li><i class="fa fa-location-arrow"></i><a href="{{ url('/form/ubicacion') }}">Ubicación</a>
                                 </li>
                                 <li><i class="ti-info"></i> <a href="#">Nosotros</a></li>
-                                <li><i class="ti-user"></i> <a href="#">Mi Cuenta</a></li>
+                                <li><i class="fa fa-user-circle"></i> <a href="#">Mi Cuenta</a></li>
                                 @if (Auth::guest())
-                                <li><i class="ti-power-off"></i><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
+                                <li><i class="fa fa-sign-out"></i><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
                                 @else
-                                <li><i class="ti-power-off"></i><a href="{{ url('/logout/session') }}">Cerrar Sesión</a>
+                                <li><i class="fa fa-sign-out"></i><a href="{{ url('/logout/session') }}">Cerrar Sesión</a>
                                 </li>
                                 @endif
                             </ul>
@@ -201,19 +202,18 @@
                                                     <li><a href="#">Vender<i class="ti-angle-down"></i>
                                                             <!--<span class="new">Nuevo</span>--></a>
                                                         <ul class="dropdown">
-                                                            <li><a href="{{ url('/registrar/producto/orpl') }}">Subir Producto</a></li>
-                                                            <li><a href="{{ url('/consultar/producto/db/orpl') }}">Mis Productos</a></li>
+                                                            <li><a href="{{ url('/tipo/producto') }}">Subir Producto</a></li>
+                                                            <li><a href="{{ url('/consultar/producto/db/orpl') }}">Mis productos en venta</a></li>
                                                         </ul>
                                                     </li>
                                                 @endif
                                                 <li><a href="#">Compras<i class="ti-angle-down"></i>
                                                         <!--<span class="new">Nuevo</span>--></a>
                                                     <ul class="dropdown">
-                                                        <li><a href="cart.html">Carrito</a></li>
-                                                        <li><a href="checkout.html">Verificar pago</a></li>
+                                                        <li><a href="{{ url('/carrito/producto') }}">Ver Carrito</a></li>
+                                                        <li><a href="{{ url('/pagar/producto') }}">Pagar Cuenta</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="#">Paginas</a></li>
                                                 <li><a href="#">Blog<i class="ti-angle-down"></i></a>
                                                     <ul class="dropdown">
                                                         <li><a href="blog-single-sidebar.html">Ver comentarios</a></li>
