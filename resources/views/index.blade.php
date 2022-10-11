@@ -58,7 +58,7 @@
                                                             <a data-toggle="modal" data-target="#exampleModal" title="Quick View" href="#"><i class=" ti-eye"></i><span>Quick Shop</span></a>
                                                         </div>
                                                         <div class="product-action-2 padding-left-10">
-                                                            <a title="Agregar al carrito" href="#">Agregar al carrito</a>
+                                                            <a title="Agregar al carrito" href="{{ url('/carrito/producto') }}">Agregar al carrito</a>
                                                         </div>
                                                     </div>
                                                 </div>

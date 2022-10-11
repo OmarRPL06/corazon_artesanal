@@ -9,8 +9,7 @@
                 <div class="bread-inner">
                     <ul class="bread-list">
                         <li><a href="{{ url('/') }}">Inicio<i class="ti-arrow-right"></i></a></li>
-                        <li class="active"><a href="{{ url('/tipo/producto') }}">Tipo de producto<i class="ti-arrow-right"></i></a></li>
-                        <li class="active">Vender Ropas</li>
+                        <li class="active">Vender un articulo</li>
                     </ul>
                 </div>
             </div>
@@ -26,7 +25,7 @@
                 <div class="col-lg-12 col-12">
                     <div class="form-main">
                         <div class="section-title text-center">
-                            <h2>Apartado para vender Accesorios Artesanales</h2>
+                            <h2>Vender Artículo</h2>
                         </div>
                         @if (count($errors) > 0)
                         <div class="alert alert-danger" role="alert">
@@ -38,6 +37,7 @@
                         </div>
                         @endif
                         <form class="form bold" action="{{ route('registro.producto') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
@@ -55,59 +55,33 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <label>Marca:<span>*</span></label>
-                                        <input name="tipo" type="text" placeholder="Ingrese la marca..." required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label>Modelo:<span>*</span></label>
-                                        <input name="tipo" type="text" placeholder="Ingrese el modelo..." required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label>Tipo de tela:<span>*</span></label>
-                                        <input name="tipo" type="text" placeholder="Ingrese el tipo de tela..."
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label>Estado del Producto:<span>*</span></label>
-                                        <select name="estado" class="form-control font-sans-serif-form-orpl">
-                                            <option>Elige una opción</option>
-                                            <option>Nuevo</option>
-                                            <option>Usado - Como nuevo</option>
-                                            <option>Usado - Buen estado</option>
-                                            <option>Usado - Aceptable</option>
+                                        <label class="block">Categoría:<span>*</span></label>
+                                        <select name="categoria" class="form-control">
+                                            <option>Selecciona una categoría</option>
+                                            <option>Playera</option>
+                                            <option>Camisa</option>
+                                            <option>Pantalon</option>
+                                            <option>Short</option>
+                                            <option>Blusa</option>
+                                            <option>Falda</option>
+                                            <option>Vestido</option>
+                                            <option>Gorra</option>
+                                            <option>Calzado</option>
+                                            <option>Sandalia</option>
+                                            <option>Accesorio</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <label>Color:<span>*</span></label>
-                                        <input name="color" type="text" placeholder="Ingrese el color.." required>
+                                        <label>Marca:<span>*</span></label>
+                                        <input name="marca" type="text" placeholder="Ingrese la marca..." required>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <label>Talla:<span>*</span></label>
-                                        <input name="talla" type="text" placeholder="Ingrese la talla..." required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label>Tipo de manga:<span>*</span></label>
-                                        <input name="manga" type="text" placeholder="Ingrese el tipo de manga..."
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label>Tipo de cuello:<span>*</span></label>
-                                        <input name="cuello" type="text" placeholder="Ingrese el tipo de cuello..."
-                                            required>
+                                        <label>Modelo:<span>*</span></label>
+                                        <input name="modelo" type="text" placeholder="Ingrese el modelo..." required>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
@@ -118,16 +92,15 @@
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <label>IVA / 0<span>*</span></label>
-                                        <input name="iva" type="text" placeholder="Ingrese el iva o coloque 0..."
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="form-group">
-                                        <label>Imagen del producto<span>*</span></label>
+                                        <label>Foto(s):<span>*</span></label>
                                         <input class="form-control" name="img" type="file"
                                             placeholder="Ingrese el Estado..." required accept="image/*">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Descripción del producto:<span>*</span></label>
+                                        <textarea name="descripcion" cols="30" rows="10" placeholder="Ingrese en este apartado, lo que es la talla, color, numero, material de que esta hecha, etc..."></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">

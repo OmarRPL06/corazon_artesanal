@@ -73,12 +73,15 @@
                         <!-- Top Right -->
                         <div class="right-content">
                             <ul class="list-main">
-                                <li><i class="fa fa-location-arrow"></i><a href="{{ url('/form/ubicacion') }}">Ubicación</a>
-                                </li>
+                                @if (!Auth::guest())
+                                    <li><i class="fa fa-user-o"></i>Bienvenido {{ auth()->user()->name }}</li>
+                                    {{-- <li><i class="fa fa-location-arrow"></i> <a href="{{ url('/form/ubicacion') }}">{{ auth()->user()->name }}</a></li> --}}
+                                @endif
                                 <li><i class="ti-info"></i> <a href="#">Nosotros</a></li>
                                 <li><i class="fa fa-user-circle"></i> <a href="#">Mi Cuenta</a></li>
                                 @if (Auth::guest())
                                 <li><i class="fa fa-sign-out"></i><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
+                                <li><i class="fa fa-pencil-square-o"></i><a href="{{ url('/user/jgc') }}">Registrarse</a></li>
                                 @else
                                 <li><i class="fa fa-sign-out"></i><a href="{{ url('/logout/session') }}">Cerrar Sesión</a>
                                 </li>
@@ -202,7 +205,7 @@
                                                     <li><a href="#">Vender<i class="ti-angle-down"></i>
                                                             <!--<span class="new">Nuevo</span>--></a>
                                                         <ul class="dropdown">
-                                                            <li><a href="{{ url('/tipo/producto') }}">Subir Producto</a></li>
+                                                            <li><a href="{{ url('/registrar/producto/orpl') }}">Subir Producto</a></li>
                                                             <li><a href="{{ url('/consultar/producto/db/orpl') }}">Mis productos en venta</a></li>
                                                         </ul>
                                                     </li>

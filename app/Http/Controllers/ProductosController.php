@@ -9,21 +9,21 @@ class ProductosController extends Controller
 {
     public function index()
     {
-        $productos = Productos::orderBy('created_at')->get();
+        $productos = Productos::orderBy('created_at', 'DESC')->get();
 
         return view('index', ['producto' => $productos]);
     }
 
     public function miProducto()
     {
-        $productos = Productos::orderBy('created_at')->get();
+        $productos = Productos::orderBy('created_at', 'DESC')->get()->where('idUser', auth()->user()->id);
 
         return view('Productos.ConsultarProducto', ['producto' => $productos]);
     }
 
     public function create()
     {
-        return view('Productos.RegistrarRopas');
+        return view('Productos.RegistrarProducto');
     }
 
     public function store(Request $request)
@@ -32,26 +32,24 @@ class ProductosController extends Controller
             $request,
             [
                 'nombre_producto' => 'required',
-                'tipo' => 'required',
+                'precio' => 'required',
+                'categoria' => 'required',
+                'marca' => 'required',
                 'modelo' => 'required',
                 'existencia' => 'required',
-                'talla' => 'required',
-                'color' => 'required',
-                'precio' => 'required',
-                'iva' => 'required',
                 'img' => 'required|image',
+                'descripcion' => 'required',
             ],
             [
                 'nombre_producto.required' => 'Debe de agregar el nombre del producto',
-                'tipo.required' => 'Debe de agregar el tipo de producto',
-                'modelo.required' => 'Ingrese el modelo del producto',
-                'existencia.required' => 'Ingrese la existencia del producto',
-                'talla.required' => 'Ingrese la talla',
-                'color.required' => 'Ingrese el color',
                 'precio.required' => 'Ingrese el precio del producto',
-                'iva.required' => 'Ingrese la iva del producto',
+                'categoria.required' => 'Seleccione la categoría de su producto',
+                'marca.required'=>'Dede de agregar la marca de su producto',
+                'modelo.required' => 'Dede de ingresar el modelo del producto',
+                'existencia.required' => 'Ingrese la existencia del producto',
                 'img.required' => 'Debe de subir la imagen del producto en el formato correcto',
                 'img.image' => 'No se permiten archivos de otro formato',
+
             ],
         );
 
@@ -61,14 +59,13 @@ class ProductosController extends Controller
         $producto = new Productos();
         $producto->idUser = auth()->user()->id;
         $producto->nombreProducto = $request->input('nombre_producto');
-        $producto->tipo = $request->input('tipo');
+        $producto->precio = $request->input('precio');
+        $producto->categoria = $request->input('categoria');
+        $producto->marca = $request->input('marca');
         $producto->modelo = $request->input('modelo');
         $producto->existencia = $request->input('existencia');
-        $producto->talla = $request->input('talla');
-        $producto->color = $request->input('color');
-        $producto->precio = $request->input('precio');
-        $producto->iva = $request->input('iva');
         $producto->img = $image->getClientOriginalName();
+        $producto->descripcion = $request->input('descripcion');
         $producto->save();
 
         return redirect('/consultar/producto/db/orpl');

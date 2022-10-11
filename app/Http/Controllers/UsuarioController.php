@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\usuario;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+
 
 class UsuarioController extends Controller
 {
@@ -15,7 +17,8 @@ class UsuarioController extends Controller
      */
     public function index()
     {
-        
+        $usuarios = registrarusuario::all();
+        return view('usuario.index', compact('usuarios'));
     }
 
     /**
@@ -25,7 +28,7 @@ class UsuarioController extends Controller
      */
     public function create()
     {
-        return view("Usuario.RegistrarUser");
+        return view('Usuario.RegistrarUsuario');
     }
 
     /**
@@ -36,7 +39,54 @@ class UsuarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(
+            $request, [
+                'nombre' => ['required'],
+                'apellido_paterno' => ['required'],
+                'apellido_materno' => ['required'],
+                'telefono' => ['required'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => ['required', 'string', 'min:8'],
+                'password_verify' => ['required', 'string', 'min:8'],
+            ],
+            [
+                'nombre.required' => 'Escribe tu nombre solo letras no se aceptan numeros',
+                'apellido_Paterno.required' => 'Escribe su apellido correctamente sin numero y simbolos especiales',
+                'apellido_Materno.required' => 'Escribe tu segundo apellido sin numeros ni simbolos especiales',
+                'telefono.required' => 'Escribe tu numero de telefono',
+                'email.required' => 'Debes ingresar tu direccion de correo electronico',
+                'email.email' => 'La direccion de correo electronico no es valido',
+                'email.unique' => 'La direccion de correo ya existe, escribe otra distinta',
+                'password.required' => 'Debes ingresar la contraseña de la cuenta',
+                'password.min' => 'Debes ingresar una contraseña minino de 8 caracteres',
+                'password_verify' => 'Repite su constraseña'
+            ]
+        );
+
+        if($request->input('password') == $request->input('password_verify')) {
+
+            $user = new User();
+            $user->name = $request->input('nombre');
+            $user->apellidoPaterno = $request->input('apellido_paterno');
+            $user->apellidoMaterno = $request->input('apellido_materno');
+            $user->telefono = $request->input('telefono');
+            $user->email = $request->input('email');
+            $user->password = Hash::make($request->input('password'));
+            $user->tipo = 'CLIENTE';
+            $user->save();
+            if ($request->input('root')) {
+                return redirect()
+                    ->back()
+                    ->withSuccess('Se registró un nuevo usuario');
+            } else {
+                return redirect('/login');
+            }
+
+        }else{
+            return redirect()
+                ->back()
+                ->withSuccess('No coincide la repetición de la contraseña, escribe correctamente');
+        }
     }
 
     /**
@@ -58,7 +108,8 @@ class UsuarioController extends Controller
      */
     public function edit(usuario $usuario)
     {
-        //
+        $usuario = registrarusuario::finO0rFail($idUser);
+        return view('Usuario.editUser', compact('usuario'));
     }
 
     /**

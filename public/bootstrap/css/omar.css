@@ -38,8 +38,9 @@
     font-size: 14px;
 }
 
-.bg-form {
-    background-color: #f4f4f4 !important;
+.bg-gray-btn {
+    /* border-color: #f4f4f4 !important; */
+    border-color: #eee6e6 !important;
 }
 
 .text-error {
@@ -249,4 +250,8 @@
 
 .color-green {
     color: #0cac5c;
+}
+
+.block {
+    display: block;
 }
